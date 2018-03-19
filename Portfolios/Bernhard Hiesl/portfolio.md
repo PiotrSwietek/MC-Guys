@@ -68,3 +68,23 @@ Nothing here
 #### Weirdness/crazyness
 * control center with holographic displays
 * exchange offices
+
+### Internet of Shrimps
+
+#### Scenarios and application domains
+* parody of devices nowadays
+
+#### Technologies
+* tablet
+* micro controllers
+
+#### Feasablitiy
+1. What might be doable?
+	Nothing here
+2. What not?
+Nothing here
+3. When?
+Nothing here
+
+#### Weirdness/crazyness
+* whole video was weird
