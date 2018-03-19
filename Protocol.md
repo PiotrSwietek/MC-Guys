@@ -17,3 +17,14 @@ When entering the SD we thought the Pi is broken because we did not felt the spr
 Then we started the Pi and connected to it via the ssh agent (MobaXTerm). Then we changed the user password for pi from ulnoiot to mcguys123.
 The next step is the updating of the unloiot software.
 Then we expaned the harddisk in the raspi-config.
+
+
+## IoT Nodes
+
+Commands are faster than the provided filebrowser from MobaXTerm (for denis).
+
+Misunderstanding with the config files system.conf and node.conf
+
+d("led","blue",onboardled)
+
+d("button", "switch", d1, "depressed", "pressed")
