@@ -88,3 +88,7 @@ Nothing here
 
 #### Weirdness/crazyness
 * whole video was weird
+
+## Problems & Lessons Learned
+### SSH
+I had some problems with the SSH connection to git. I cloned the github repository with the HTTP link not with the SSH link. After creating, adding and using the SSH stuff everything now is working. I've also helped my colleagues to setup this settings.
