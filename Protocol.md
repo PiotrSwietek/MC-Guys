@@ -18,6 +18,19 @@ Then we started the Pi and connected to it via the ssh agent (MobaXTerm). Then w
 The next step is the updating of the unloiot software.
 Then we expaned the harddisk in the raspi-config.
 
+we copied the system_template and renamed it to onboard_blinker.
+Then we connected the ESP8266 and flashed it with the ulno software with the initialize command.
+Now we could control the led through WIFI with the console command.
+Now we can turn on the LED with the command onboardled onboardled.init(Pin.OUT)
+And turn it off with onboardled.on
+(The commands are inversed)
+
+
+Then we created a new output port for simple led. The used name will be appended to MQTT topic and a set appended to send commands to.
+Command: d("led", "blue", onboardled)
+
+now we can turn off the led through MQTT with the command: mqtt_send_onboard_blinker/blue/set on
+
 
 ## IoT Nodes
 
