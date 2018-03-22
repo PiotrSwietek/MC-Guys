@@ -8,12 +8,12 @@ I've already heard some stuff about home and building automation, for example ma
 Or kinda google home or something like that. House control application with speech control.
 
 ### Pros
-Good ideas
-good design skills
-even if i'm not the best in programming i can understand and can discuss hard problems
+* Good ideas
+* good design skills
+* even if i'm not the best in programming i understand everything and can discuss hard problems
 
 ### Cons
-not really the motivation in person
+* not really the motivation in person
 
 
 ## Videos
@@ -89,7 +89,7 @@ Nothing here
 #### Weirdness/crazyness
 * whole video was weird
 
-# What is Home and Building automation
+## What is Home and Building automation
 * Remonte control building environment
 * Automating building environment using sensors (light, temp)
 * monitoring
@@ -103,3 +103,9 @@ Nothing here
 ## Problems & Lessons Learned
 ### SSH
 I had some problems with the SSH connection to git. I cloned the github repository with the HTTP link not with the SSH link. After creating, adding and using the SSH stuff everything now is working. I've also helped my colleagues to setup this settings.
+
+### Node Problem
+The biggest problem this morning was, that we couldn't figure out which device is node 1 and node 2. Therefore we write it down
+
+node1 = LED
+node2 = BUTTON
