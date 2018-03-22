@@ -42,3 +42,69 @@ We had some weird problems with the connection to the nodes. looked like an netw
 Programming tool for wiring together hardware devices.
 
 Everything was clear except the automatically intizialization of the local variable context.togglestate.
+
+
+### Piotr, Manuel, Oliver
+- invite manuel, denis and bernhard to ulnoiot and ulnoiot.mc0509 to riot via email
+- flashing blinkder node for testing
+
+- flashing blinker node
+- plug in to other computer
+- wait (e.g. 1 minute) to boot up
+- connect via ssh to pi
+- use "console" to connect to blinker
+- testing local blinks via:
+onboardled.init( Pin.OUT )
+onboardled.on()
+onboardled.off()
+onboardled.on()
+
+- testing blinker over mqtt
+"console" in right node-folder:
+d("led", "blue", onboardled, "on", "off")
+on raspberry:
+test mqtt messaging: mqtt_send_onboard_blinker/blue/set on
+
+- settinup blinker on manuels raspberry
+Make a folder iot-[yourname]
+Copy the contents of ulnoiot/lib/system_template into your iot-folder
+Rename node_template into onboard_blinker.
+go to folder
+plugin wemos d1 mini on raspberry usb
+initialize to flash
+plugin other computer
+raspberry - go folder to node, command: console
+
+-setting up button on raspberyy console for button_blinker
+d("button", "button1", d1, "off", "on")
+run()
+testing with button press
+on console: publishing button....
+
+
+-forwarding actoin from button to blinker via mqtt
+raspberry:
+mqtt_action button_blinkder/button1 anychange xyz mqqt_send onbard_blinker/blue/set
+
+-autostart file of each node folder
+adding d commands to autostart file (at the end) to enable plug and play functionality
+adding run commands
+
+-autostart file deploying
+folder of node
+command: deploy
+
+-node-RED
+testing node-RED with the tutorial video
+
+-lock with relay
+wiring up relay with lock, relay needs 12V (using Pi power adpater) and plugin in relay with node
+register device relay
+d("out", "relay", d2)
+test device
+device["releay].evaluate["on"]
+testing
+mqtt_send relay/set on
+
+
+
