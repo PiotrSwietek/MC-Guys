@@ -89,6 +89,17 @@ Nothing here
 #### Weirdness/crazyness
 * whole video was weird
 
+# What is Home and Building automation
+* Remonte control building environment
+* Automating building environment using sensors (light, temp)
+* monitoring
+* energy efficency
+* security (privacy)
+* entertainment
+* connect devices together
+* convenience
+* Transparancy
+
 ## Problems & Lessons Learned
 ### SSH
 I had some problems with the SSH connection to git. I cloned the github repository with the HTTP link not with the SSH link. After creating, adding and using the SSH stuff everything now is working. I've also helped my colleagues to setup this settings.
