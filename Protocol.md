@@ -18,19 +18,6 @@ Then we started the Pi and connected to it via the ssh agent (MobaXTerm). Then w
 The next step is the updating of the unloiot software.
 Then we expaned the harddisk in the raspi-config.
 
-we copied the system_template and renamed it to onboard_blinker.
-Then we connected the ESP8266 and flashed it with the ulno software with the initialize command.
-Now we could control the led through WIFI with the console command.
-Now we can turn on the LED with the command onboardled onboardled.init(Pin.OUT)
-And turn it off with onboardled.on
-(The commands are inversed)
-
-
-Then we created a new output port for simple led. The used name will be appended to MQTT topic and a set appended to send commands to.
-Command: d("led", "blue", onboardled)
-
-now we can turn off the led through MQTT with the command: mqtt_send_onboard_blinker/blue/set on
-
 
 ## IoT Nodes
 
@@ -38,8 +25,15 @@ Commands are faster than the provided filebrowser from MobaXTerm (for denis).
 
 Misunderstanding with the config files system.conf and node.conf
 
-d("led","blue",onboardled)
+d("led","led1",onboardled)
 
 d("button", "switch", d1, "depressed", "pressed")
 
 # 22.03.2018
+## Configure Node1 and Node2
+The biggest problem this morning was, that we couldn't figure out which device is node 1 and node 2. Therefore we write it down
+
+node1 = LED
+node2 = BUTTON
+
+We had some werid problems with the connection to the nodes. looked like an network error. after updating the autostart and flash both devices everything was up and running. the restart of the node1 after plug it into my pc it tooks a little bit longer than 10-15s but all in all everything is now working. and we can continue with our exercise
