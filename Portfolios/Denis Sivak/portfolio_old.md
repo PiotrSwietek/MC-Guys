@@ -94,28 +94,3 @@ _Weirdness/Crazyness:_
 2 devices:
 	* Smart watches
 	* Amazon Echo
-	
-## Summary of practical stuff done
-	* Setup Raspberry Pi with the UlnoIoT image
-	* Initialized and setup Wemos D1 mini
-	* Controlling onboard-LED of the Wemos using the Raspberry Pi
-	* Connection of external button to Wemos D1 mini
-	* Reading the buttons value in the Raspberry Console
-	
-## H&B Automation (22.03.2018)
-
-What does the term entail?
-	* Remote control of building environment
-	* Automation of  building environment using sensors (lights, heating, air conditioning, ...)
-	* Monitoring (water, current, ...)
-	* Energy efficiency
-	* Convenience
-	* Security
-	
-## Summary of practical stuff done
-	* Setting up a second Wemos D1 mini node
-	* Configuring button and LED as devices
-	* Using mqtt to add an action for the button press
-	* The LED can now be controlled remotely using the button
-	* Setting up Node RED to toggle the led using a button
-	* Implemented doorlock to open with GUI buttons using Node RED
