@@ -20,10 +20,10 @@ so I thought it would be kind of important to take this class.
 	* Internet
 
 #### Feasibility:
-What might be doable?:
+##### What might be doable?:
 	* Controlling electronic devices over the internet
 		
-What not?
+##### What not?
 	* Everything shown is possible up to date.
 
 #### Weirdness/Crazyness:
@@ -47,12 +47,12 @@ What not?
 	* Sensors for supply lines (water, electricity, ...)
 
 #### Feasibility:
-What might be doable?:
+##### What might be doable?:
 	* People recognition using face recognition or other biometrics
 	* Navigation through building
 	* Central building controls
 		
-What not?
+##### What not?
 	* Holographic displays
 	* Switching rooms with an elevator
 	* Tracking every person at every time
@@ -75,7 +75,7 @@ What not?
 	* Step motor
 
 #### Feasibility:
-What might be doable?:
+##### What might be doable?:
 	* Everything
 
 #### Weirdness/Crazyness:
