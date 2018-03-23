@@ -68,6 +68,8 @@ Trigger a lock (12V) with a relay controlled by a button.
 * Because the RFID tag delivers an ID and we want to check for the "right" card, we must need some logic to filter out MQTT-Messages. Using Node-RED (https://nodered.org/)
 * Node-Red is already installed on the Pi, connect to it (http://192.168.12.1:1880/)
 * Create a new Flow filtering out the ID, and manipulate message payload to on/off.
+* ![alt text](images/node-red_rfid-relay.PNG "Node-Red RFID-Relay overview")
+* ![alt text](images/node-red_rfid-relay_function.PNG "Node-Red RFID-Relay function")
 
 
 

@@ -3,7 +3,7 @@ Repository for the homebuilding automation class.
 
 ## Protocol
 Provides a detailed description (technical documentation) of the practical work done in class.
-* [Protocol](Protocol.md)
+* [Protocol](Protocol/Protocol.md)
 
 ## Portfolio
 To provide our own view of the lecture, you can find our portfolios here:
