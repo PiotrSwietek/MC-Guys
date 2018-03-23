@@ -42,3 +42,16 @@ Assisted living
 * Provide 2 typical devices (appliance or controller)
 micro-controller (arduino), smartphones, smart watches, trackers,  hue light bulb from Phillips, ...
 
+
+## UlnoIoT FirstSteps
+Goal is to get familiar with the UlnoIoT-Framework. 
+The Raspberry-Pi works as a Wireless-Router. The nodes can then connect to the Pi automatically and can talk to it via the MQTT-Protocoll. So the Pi is basically a central broker for all the nodes.
+
+### Setup
+The Raspberry-Pi got flashed with an image provided from .... The image contains all the predefined software to flash and configure the nodes, which are later used to get some input/output of our home automation system.
+To flash the Pi we used the Etcher software. This is a free online tool to make the image bootable from a SD-card.
+Before booting, we have to configure some files to get our own Wifi running (SSID and pwd).
+
+After successful boot up, the configured Wifi should be visible and can be connected to. the Pi can be remote accessed via SSH. The used terminal is called MobaXterm.
+
+
