@@ -100,6 +100,21 @@ Nothing here
 * convenience
 * Transparancy
 
+## Exercises
+
+### Setup the Raspberry Pi
+
+First of all we flashed the prepared image on the raspberry pi. After the flashing we modified the config files (user, wifi,...) to connect later to the console of the pi via MobaXTerm.
+
+### IoT Node
+The second part of the lecture we went through the given tutorial with the topic IoT Node. Here we had to flash also a prepared image on the Wemos D1 Mini. After this process we were able to disconnect it from the pi, connect it again to another usb port and reconnect again via the pi by go into the node folder and execute the console command.
+
+### Configure different nodes
+In the second lecutre our task was to turn on/off a led with a button on another Wemos D1 Mini. To do this, we needed to flash another image on the Mini. On node1 we created a device "LED" and on the node2 we created a "BUTTON". With the run command the Mini publishes his events and with mqtt we configured paths (mqtt_action) so if the button got pressed on node2 the led on node1 gets toggled.
+
+### Node RED
+TODO!
+
 ## Problems & Lessons Learned
 ### SSH
 I had some problems with the SSH connection to git. I cloned the github repository with the HTTP link not with the SSH link. After creating, adding and using the SSH stuff everything now is working. I've also helped my colleagues to setup this settings.
