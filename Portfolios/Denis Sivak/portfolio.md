@@ -1,4 +1,4 @@
-# Portfolio for H&B Automation class
+# Lecture 1
 
 ## Introduction
 
@@ -102,7 +102,9 @@ so I thought it would be kind of important to take this class.
 	* Connection of external button to Wemos D1 mini
 	* Reading the buttons value in the Raspberry Console
 	
-## H&B Automation (22.03.2018)
+## Problems during the practical stuff
+	
+# Lecture 2
 
 ### What does the term entail?
 	* Remote control of building environment
@@ -119,3 +121,8 @@ so I thought it would be kind of important to take this class.
 	* The LED can now be controlled remotely using the button
 	* Setting up Node RED to toggle the led using a button
 	* Implemented doorlock to open with GUI buttons using Node RED
+	
+## Problems during the practical stuff
+	
+	
+# Lecture 3
