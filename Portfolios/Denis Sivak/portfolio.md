@@ -83,7 +83,7 @@ so I thought it would be kind of important to take this class.
 
 ## Internet of Things research
 
-3 domains:
+### 3 domains:
 	* Banking (smart payments, NFC, ...)
 	* Wearables (smart watches, health monitoring, fitness tracking)
 	* Retail (interaction with products, QR codes, amazon cashier free shop)
@@ -91,7 +91,7 @@ so I thought it would be kind of important to take this class.
 	* Health care
 	* Assisted living
 	
-2 devices:
+### 2 devices:
 	* Smart watches
 	* Amazon Echo
 	
@@ -104,7 +104,7 @@ so I thought it would be kind of important to take this class.
 	
 ## H&B Automation (22.03.2018)
 
-What does the term entail?
+### What does the term entail?
 	* Remote control of building environment
 	* Automation of  building environment using sensors (lights, heating, air conditioning, ...)
 	* Monitoring (water, current, ...)
