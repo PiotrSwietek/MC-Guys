@@ -68,11 +68,26 @@ Trigger a lock (12V) with a relay controlled by a button.
 * Because the RFID tag delivers an ID and we want to check for the "right" card, we must need some logic to filter out MQTT-Messages. Using Node-RED (https://nodered.org/)
 * Node-Red is already installed on the Pi, connect to it (http://192.168.12.1:1880/)
 * Create a new Flow filtering out the ID, and manipulate message payload to on/off.
-* ![alt text](images/node-red_rfid-relay.PNG "Node-Red RFID-Relay overview")
-* ![alt text](images/node-red_rfid-relay_function.PNG "Node-Red RFID-Relay function")
+	* ![alt text](images/node-red_rfid-relay.PNG "Node-Red RFID-Relay overview")
+	* ![alt text](images/node-red_rfid-relay_function.PNG "Node-Red RFID-Relay function")
 
 
-
+## Showing temp/humidity on LCD-display
+* Create node on Pi for temp/humidity (single node because of combined sensor) and flash
+* Create node on Pi for LCD and flash
+* Temp/humidity
+	* Testing values via Node-Red UI component
+	* ![alt text](images/node-red_LCD-UI.PNG "Node-Red Temp/humidity UI")
+* LCD-node
+	* Following tutorial on https://github.com/ulno/ulnoiot/blob/master/doc/node_help/display44780.txt to setup all correctly.
+	* Testing node via MQTT, send message, should be displayed on LCD
+* Configure MQTT action for forwarding via Node-Red
+	* ![alt text](images/node-red_LCD.PNG "Node-Red LCD overview")
+	* ![alt text](images/node-red_LCD.PNG "Node-Red LCD function")
+	
+	
+	
+	
 
 
 # (old) notices
