@@ -124,3 +124,6 @@ The biggest problem this morning was, that we couldn't figure out which device i
 
 node1 = LED
 node2 = BUTTON
+
+### Servo
+We didn't know how to configure the servo right. After the hint that we should use "servo_switch" it was easy to implement, because the servo_switch has a on/off function where it just switches to different given angles
