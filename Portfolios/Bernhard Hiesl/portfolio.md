@@ -8,12 +8,12 @@ I've already heard some stuff about home and building automation, for example ma
 Or kinda google home or something like that. House control application with speech control.
 
 ### Pros
-Good ideas
-good design skills
-even if i'm not the best in programming i can understand and can discuss hard problems
+* Good ideas
+* good design skills
+* even if i'm not the best in programming i understand everything and can discuss hard problems
 
 ### Cons
-not really the motivation in person
+* not really the motivation in person
 
 
 ## Videos
@@ -89,6 +89,38 @@ Nothing here
 #### Weirdness/crazyness
 * whole video was weird
 
+## What is Home and Building automation
+* Remonte control building environment
+* Automating building environment using sensors (light, temp)
+* monitoring
+* energy efficency
+* security (privacy)
+* entertainment
+* connect devices together
+* convenience
+* Transparancy
+
+## Exercises
+
+### Setup the Raspberry Pi
+
+First of all we flashed the prepared image on the raspberry pi. After the flashing we modified the config files (user, wifi,...) to connect later to the console of the pi via MobaXTerm.
+
+### IoT Node
+The second part of the lecture we went through the given tutorial with the topic IoT Node. Here we had to flash also a prepared image on the Wemos D1 Mini. After this process we were able to disconnect it from the pi, connect it again to another usb port and reconnect again via the pi by go into the node folder and execute the console command.
+
+### Configure different nodes
+In the second lecutre our task was to turn on/off a led with a button on another Wemos D1 Mini. To do this, we needed to flash another image on the Mini. On node1 we created a device "LED" and on the node2 we created a "BUTTON". With the run command the Mini publishes his events and with mqtt we configured paths (mqtt_action) so if the button got pressed on node2 the led on node1 gets toggled.
+
+### Node RED
+TODO!
+
 ## Problems & Lessons Learned
 ### SSH
 I had some problems with the SSH connection to git. I cloned the github repository with the HTTP link not with the SSH link. After creating, adding and using the SSH stuff everything now is working. I've also helped my colleagues to setup this settings.
+
+### Node Problem
+The biggest problem this morning was, that we couldn't figure out which device is node 1 and node 2. Therefore we write it down
+
+node1 = LED
+node2 = BUTTON

@@ -1,4 +1,4 @@
-# Portfolio for H&B Automation class
+# Lecture 1
 
 ## Introduction
 
@@ -12,33 +12,33 @@ so I thought it would be kind of important to take this class.
 
 ### Video 1: Big Bang Theory Snippet
 
-_Scenarios and application domains:_
+#### Scenarios and application domains:
 	* Control Lights, Stereo, RC vehicles
 	* (Public) Access over internet
 
-_Technologies:_
+#### Technologies:
 	* Internet
 
-_Feasibility:_
-What might be doable?:
+#### Feasibility:
+##### What might be doable?:
 	* Controlling electronic devices over the internet
 		
-What not?
+##### What not?
 	* Everything shown is possible up to date.
 
-_Weirdness/Crazyness:_
+#### Weirdness/Crazyness:
 	* Doing it "just because they can".
 	
 ### Video 2: Siemens
 
-_Scenarios and application domains:_
+#### Scenarios and application domains:
 	* People recognition at entrance
 	* Navigation through building
 	* Tracking every person at every time
 	* Switching rooms with an elevator
 	* Central building controls
 
-_Technologies:_
+#### Technologies:
 	* Internet
 	* Holographic displays
 	* Floor sensors
@@ -46,44 +46,44 @@ _Technologies:_
 	* Building clusters
 	* Sensors for supply lines (water, electricity, ...)
 
-_Feasibility:_
-What might be doable?:
+#### Feasibility:
+##### What might be doable?:
 	* People recognition using face recognition or other biometrics
 	* Navigation through building
 	* Central building controls
 		
-What not?
+##### What not?
 	* Holographic displays
 	* Switching rooms with an elevator
 	* Tracking every person at every time
 
-_Weirdness/Crazyness:_
+#### Weirdness/Crazyness:
 	* Privacy issues
 	* Elevator for rooms
 
 ### Video 3: Internet of Shrimps
 
-_Scenarios and application domains:_
+#### Scenarios and application domains:
 	* Intelligent fridge
 	* Control over speech
 	* Surveillance
 	* Playing/Controlling instruments over internet
 
-_Technologies:_
+#### Technologies:
 	* Internet
 	* Cameras
 	* Step motor
 
-_Feasibility:_
-What might be doable?:
+#### Feasibility:
+##### What might be doable?:
 	* Everything
 
-_Weirdness/Crazyness:_
+#### Weirdness/Crazyness:
 	* The video was very weird in general. All the shown stuff is pretty useless and it's more like a homage.
 
 ## Internet of Things research
 
-3 domains:
+### 3 domains:
 	* Banking (smart payments, NFC, ...)
 	* Wearables (smart watches, health monitoring, fitness tracking)
 	* Retail (interaction with products, QR codes, amazon cashier free shop)
@@ -91,6 +91,38 @@ _Weirdness/Crazyness:_
 	* Health care
 	* Assisted living
 	
-2 devices:
+### 2 devices:
 	* Smart watches
 	* Amazon Echo
+	
+## Summary of practical stuff done
+	* Setup Raspberry Pi with the UlnoIoT image
+	* Initialized and setup Wemos D1 mini
+	* Controlling onboard-LED of the Wemos using the Raspberry Pi
+	* Connection of external button to Wemos D1 mini
+	* Reading the buttons value in the Raspberry Console
+	
+## Problems during the practical stuff
+	
+# Lecture 2
+
+### What does the term entail?
+	* Remote control of building environment
+	* Automation of  building environment using sensors (lights, heating, air conditioning, ...)
+	* Monitoring (water, current, ...)
+	* Energy efficiency
+	* Convenience
+	* Security
+	
+## Summary of practical stuff done
+	* Setting up a second Wemos D1 mini node
+	* Configuring button and LED as devices
+	* Using mqtt to add an action for the button press
+	* The LED can now be controlled remotely using the button
+	* Setting up Node RED to toggle the led using a button
+	* Implemented doorlock to open with GUI buttons using Node RED
+	
+## Problems during the practical stuff
+	
+	
+# Lecture 3
