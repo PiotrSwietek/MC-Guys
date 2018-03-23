@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 
 My name is Piotr Swietek and I am studying Mobile Computing and I also did my Bachelors degree here in Hagenberg. I am studying mobile computing because I like developing for mobile devices.
 
@@ -6,29 +6,29 @@ I take this class because I am interested in this topic and would like to have a
 
 I am probably more the programming type in a group. I can realize the ideas of others in form of code.
 
-#Filmnotes
+# Filmnotes
 
-##Big bang theory
-###Scenarios and domains
+## Big bang theory
+### Scenarios and domains
 	turn lamp online
 	turn stereo on
 	remote cars
 	public access
 
-###Technologies
+### Technologies
 	laptop
 	internet
 
-###Feasable?
+### Feasable?
 	yes doable
 	
-###weirdness
+### weirdness
 	the steering through internet is not crazy
 	but public access is
 	
-##Smart buildings - Siemens
+## Smart buildings - Siemens
 
-###Scenarios
+### Scenarios
 	security
 	flexibility
 	efficiency
@@ -36,32 +36,32 @@ I am probably more the programming type in a group. I can realize the ideas of o
 	personal navigation
 	lightning used for navigation
 
-###Technologies
+### Technologies
 	standard interfaces
 	plug and go
 
-###Feasable
+### Feasable
 	yes could be doable but requires a lot of ressources to do
 
-###weirdness
+### weirdness
 	not really
 	
-##Internet of Shrimps
+## Internet of Shrimps
 
-###Scenarios
+### Scenarios
 	use IoT for controlling kitchen tools
 	own soda dispenser in the phone
 
-###Technologies
+### Technologies
 	heavy modified smart phone
 
-###Feasable
+### Feasable
 	not really - because why?
 
-###weirdness
+### weirdness
 	very weird
 	
-#Setting up Raspberry Pi
+# Setting up Raspberry Pi
 
 We downloaded the image from ulnoiot and made sure that the checksum is the same as stated on the source site.
 Then we flashed the SD card with it using Etcher.
@@ -79,7 +79,7 @@ Then we expanded the harddisk in the raspi-config.
 Now the raspberry is set up correctly and we can log into the created WiFi mc_guys2
 In this exercise I learned how to set up a raspberry pi with a flashed SD card and how to configure it.
 
-#IoT domains
+# IoT domains
 
 Healthcare - Monitor hand hygiene compliance through IOT device and sensors to reduce transmission of Hospital Acquired Infections to patients.
 Transport and logistics - Monitoring the logistics vehicles health to send alerts.
@@ -87,13 +87,13 @@ Retail - Remote interaction with products increase personalized shopping experie
 Insurance - Tracking clients' activity and offer discounts or rewards for healthy and safe behavior.
 Farming - Tracking soil health and climate.
 
-##Devices:
+## Devices:
 * smart locks
 * smart plugs
 * smart lighting
 * smart thermostats
 
-#Node onboard_blinker
+# Node onboard_blinker
 
 we copied the system_template and renamed it to onboard_blinker.
 Then we connected the ESP8266 and flashed it with the ulno software with the initialize command.
@@ -112,7 +112,7 @@ now we can turn on the led through MQTT with the command: mqtt_send onboard_blin
 In this exercise I learned how to use the ESP8266. I have never worked with it before and it is remarkable how much you can do with such a small device.
 Also I used MQTT the first time and I like it so far.
 
-#H&B Automation Term - what is it used for
+# H&B Automation Term - what is it used for
 
 * Make life easier / convenience
 * Security
@@ -122,7 +122,7 @@ Also I used MQTT the first time and I like it so far.
 * Indoor positioning
 * Safety (fire & waterdamage)
 
-#MQTT - NodeRed
+# MQTT - NodeRed
 
 Task was to steer the blinker through a button. But both were on seperate devices only communicating through the WiFi.
 We followed the solution of Bernhard Hiesl & Denis Sivak //Link here
@@ -136,7 +136,7 @@ First we always flashed the device when editing the autostart.py to copy it onto
 In this exercise I learned what NodeRed is and it looks like a very nice and convenient tool to define network processes. Also it was fascinating when it all worked.
 We had some trouble setting it all up but in retrospective it isnt hard at all.
 
-#Smart Lock
+# Smart Lock
 
 Task was to control a magnetic lock through a graphical UI in the web using NodeRed.
 
