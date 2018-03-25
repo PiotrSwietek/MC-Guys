@@ -1,67 +1,134 @@
 # Portfolio - Home and Building Automation
-## Mobile Computing Master - SS 2018
-
+Mobile Computing Master - Summer term, 2018
 
 ## whoami
-My name is Oliver Barth. I come from small town called Vorderweißenbach (30km north to Linz). I did my Bachelor in Mobile Computing in 2017 and currently running the Mobile Computing Master Program.
-* Why in this master program?
+My name is Oliver Barth. I come from small town called Vorderweißenbach (30km north to Linz). I did my Bachelors Degree in Mobile Computing in summer 2017 and I am currently enrolled in the Mobile Computing Masters Program.
+
+### Why am I in this master program?
 Lot of modules to choose from, program with the most interesting lectures (in my opinion).
 
-* Expectations H&B?
+### Expectations H&B?
 Do (and see) some cool projects. Understand what's behind the scenes (sensors, actors, architecture, ...)
 
-* Strength/weakness myself?
+### Strength/weakness myself?
 Strength: Quite good at bringing a project to code (paper).
 Weakness: Not that creative, hate writing documentations (especially if has to happen afterwards).
 
 ## Video session
-* Scenarios
-Big bang theory: typical home automation
-Siemens: life in the future, space control, intelligent routing, energy efficiency, security
-* Technology
-Big bang theory: Satellite, smartphone, laptop
-Siemens: interactive hologram, light barriers for entry policy (open door principle), plug-in of whole room, distributed grid (intelligent network), personal navigation (smartphone, walls), intelligent light (different modes) e.g. for emergency, interactive floor to mark traces, IT-backbone for clustering buildings
-Internet of shrimps: voice control
-* Feasibility
-Big bang theory: using satellite for home automation (too expensive)
-Siemens: no interactive hologram in time
-* Weirdness/craziness
-Big bang theory: remote switch for lightning, sending signal all over the world,
-Siemens: controlling/monitoring everything (privacy concerns), movable offices
+### Scenarios shown
+* Big bang theory
+
+   Typical home automation
+* Siemens
+
+   Life in the future, space control, intelligent routing, energy efficiency, security
+### Technology
+* Big bang theory
+
+   Satellite, smartphone, laptop
+* Siemens
+
+   Interactive hologram, light barriers for entry policy (open door principle), plug-in of whole room, distributed grid (intelligent network), personal navigation (smartphone, walls), intelligent light (different modes) e.g. for emergency, interactive floor to mark traces, IT-backbone for clustering buildings
+* Internet of shrimps
+
+   Voice control
+### Feasibility
+* Big bang theory
+
+   Using satellite for home automation (too expensive)
+* Siemens
+
+   No interactive hologram in time
+### Weirdness/craziness
+* Big bang theory
+
+   Remote switch for lightning, sending signal all over the world
+* Siemens
+
+   Controlling/monitoring everything (privacy concerns), movable offices
 
 ## Internet of things
-* What does the Inernet of Things entail?
-"The Internet of things (IoT) is the network of physical devices, vehicles, home appliances and other items embedded with electronics, software, sensors, actuators, and connectivity which enables these objects to connect and exchange data" - Wikipedia
+### What does the Inernet of Things entail?
+Definition from Wikipedia (https://en.wikipedia.org/wiki/Internet_of_things)
+> The Internet of things (IoT) is the network of physical devices, vehicles, home appliances and other items embedded with electronics, software, sensors, actuators, and connectivity which enables these objects to connect and exchange data.
 
-* Provide 3 domains
-Agriculture
-Smart factory
-Medical and health care
-Assisted living
 
-* Provide 2 typical devices (appliance or controller)
-micro-controller (arduino), smartphones, smart watches, trackers,  hue light bulb from Phillips, ...
+### Provide 3 domains
+* Agriculture
+* Smart factory
+* Medical and health care
+* Assisted living
+
+### Provide 2 typical devices (appliance or controller)
+* Micro-controller (e.g. arduino)
+* Smartphones
+* Smart watches
+* Trackers
+* Hue light bulbs from Phillips
+* ...
 
 ## Projectteam/Git setup
+[(Protocol)](../../Protocol/Protocol.md#project-setup)
+
 Before we continue with our first practical work, we have to setup a team and a git repository, so everyone can share their knowledge and code.
 The setup was quite easy, although there was some problems with SourceTree regarding the login. In fact, you could not login with username and password (and I don't know why, it always worked before). Piotr had the same issues, so this is obviously a bug within SourceTree itself. Switching to SSH-keys (which should always be the best choice concerning security and convenience) to access the repo fixed the problem.
 
-## UlnoIoT FirstSteps
+## UlnoIoT environment setup
+[(Protocol)](../../Protocol/Protocol.md#ulnoiot-environment-setup)
+
 Goal is to get familiar with the UlnoIoT-Framework. 
 The Raspberry-Pi works as a Wireless-Router. The nodes can then connect to the Pi automatically and can talk to it via the MQTT-Protocoll. So the Pi is basically a central broker for all the nodes.
 
 ### Setup
-The Raspberry-Pi got flashed with an image provided from .... The image contains all the predefined software to flash and configure the nodes, which are later used to get some input/output of our home automation system.
+The Raspberry-Pi got flashed with an image provided from our professor and can be found here: (https://goo.gl/bVgLMr). The image contains all the predefined software to flash and configure the nodes, which are later used to get some input/output of our home automation system. Interesting for me would have been what software/framwworks etc. are on the image and how to build something like that.
+
 To flash the Pi we used the Etcher software. This is a free online tool to make the image bootable from a SD-card.
 Before booting, we have to configure some files to get our own Wifi running (SSID and pwd).
 The setup was quite easy, so we can now (for the first time) boot up our Pi.
 
-After successful boot up, the configured Wifi should be visible and can be connected to. the Pi can be remote accessed via SSH. The used terminal is called MobaXterm.
-MobaXterm is quite is to use (you can actually open files in an kind of remote editor) and so there appeared no problems at all.
+After successful boot up, the configured Wifi should be visible and can be connected to. The Pi can be remote accessed via SSH. The used terminal is called MobaXterm.
+MobaXterm is quite easy to use (you can actually open files in an kind of remote editor) and so there appeared no problems at all.
 
 ### Our first node
+[(Protocol)](../../Protocol/Protocol.md#iot-nodes)
+
 The next task was to create our first node which should be able to (automatically) connect to the Pi. With the Pi and the remote shell, we can than connect to the node and execute some local commands, e.g. to let a onboard led turn on/off.
 My part was the whole configuring on the Pi with the help of the others.
 Working with the terminal needed some time to get familiar with the commands and behavior. After that navigating and copying files (configuration for the node) around worked out well.
-Flashing the node with the copied configuration only needs one command ("initialize" - quite easy and convenient). 
-After successful flashing and connecting to another computer via usb we had some troubles connecting to the node via the Pi-shell. There was always a connection error. The reason for that was that we need to wait about 30 seconds to let the node boot up and connect to the Pi. After some trial and error we made out that behavior. Note to myself: be a little bit more patient.
+Flashing the node with the copied configuration only needs one command (`initialize` - quite easy and convenient). After some discussions I found out that as kind of operating system *MicroPython* was used (https://micropython.org/). But there are still some open questions (and maybe also interesting for the others): *What is MicroPython at all, why are we using this, what are the alternatives?*
+
+After successful flashing and connecting to another computer via usb we had some troubles connecting to the node via the Pi-shell. There was always a connection error. The reason for that was that we need to wait about 30 seconds to let the node boot up and connect to the Pi. After some trial and error approaches we made out that behavior. Note to myself: be a little bit more patient.
+
+One of the hardest steps was actually getting the commands right to register a device, and of course finding out what that actually means and what it does in the background. One accentual thing we missed in the beginning, the `run()` command after we finally figured out how to register a device.
+
+### UlnoIoT Hello World
+[(Protocol)](../../Protocol/Protocol.md#ulnoiot-hello-world)
+
+Goal is to set up a "Hello World program" in the sense of home automation: Triggering a button of one node turns a LED on/off on the other node.
+
+Setting up the nodes was quite easy because we already knew the commands needed. The big question was, how to set up the connection to forward the button signal to the other node. With the help of our team-mates, we finally figured that out. Understanding the architecture behind our setup (Pi is our MQTT-broker as well) and what that means was not that clear for the others, because they were completley unfamiliar with the MQTT-protocol. Fixing it with the short intro from our professor inbetween made that more clear for us all.
+
+### Advanced Hello World
+[(Protocol)](../../Protocol/Protocol.md#relay)
+
+Because triggering the onbard LED was an quite simple task, we want to trigger a relay with a connected lock with our button.
+We only had to set up the relay on our controller and wiring all together. For the relay we used 12V power supply. But we nearly burned the thing up (it already began to stank) because obviously the voltage was too high. Maybe we should attach a label on it to prohibit such mistakes.
+
+### RFID controlled lock
+[(Protocol)](../../Protocol/Protocol.md#control-servolock-vai-a-rfid-reader)
+
+For that task I was responsible for extending our protocol and wiring up the RFID-reader on our controller. Thanks to the docs from our professor no problems occured.
+Together we set up all devices. The main question was how we can trigger the lock with an RFID-card? We could not simply forward the input from the card to the other node, there must be some logic in between. Because we do not want to code (look for the right console-commands), we used *Node-RED* for that task. 
+
+After getting through some basic tutorials (and I think that was absolutely neccesary to get an idea what is going on) we finally set up a function to filter out the ID of the card to check if it is a valid one and then forwards on or off to the other node. 
+
+### Showing temp/humidity on LCD-display
+[(Protocol)](../../Protocol/Protocol.md#showing-temphumidity-on-lcd-display)
+
+Again I was responsible for extending the protocol. 
+Now that we are getting more and more familiar with *Node-RED*, there was this advanced exercise for us. Setting up devices was quite easy that time, the focus lay on the MQTT-fowarding stuff. We were quite unsure what functions we should use for our problem, because we needed to combine the two sensor values and clearing somehow the display if new messages arrive. After some trial and error approaches and the help of our team-mates, we finally made it.
+
+### Off topic
+[(Protocol)](../../Protocol/Protocol.md)
+
+Because I found out there is a special formatting sign for code snippets in markdown, I changed all the snippets inside the protocol to that formatting. Looks quite fancy now.
