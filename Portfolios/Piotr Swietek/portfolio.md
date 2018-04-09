@@ -63,20 +63,16 @@ I am probably more the programming type in a group. I can realize the ideas of o
 	
 # Setting up Raspberry Pi
 
-We downloaded the image from ulnoiot and made sure that the checksum is the same as stated on the source site.
-Then we flashed the SD card with it using Etcher.
+I downloaded the image from ulnoiot and made sure that the checksum is the same as stated on the source site.
+Then I flashed the SD card with it using Etcher.
+//Link protocol
 
-We set the values in the config file to:
-uiot_ap_name:		mc_guys_2
-uiot_ap_password:	mcguys123
+When entering the SD I thought the Pi is broken because I did not felt the spring when I inserted the card but the proffessor told us this Pi has no spring installed so all was fine.
 
-When entering the SD we thought the Pi is broken because we did not felt the spring when we inserted the card but the proffessor told us this Pi has no spring installed so all was fine.
+Then I started the Pi and connected to it via the ssh agent (MobaXTerm).
 
-Then we started the Pi and connected to it via the ssh agent (MobaXTerm). Then we changed the user password for pi from ulnoiot to mcguys123.
-The next step is the updating of the ulnoiot software.
-Then we expanded the harddisk in the raspi-config.
+After the raspberry was set up correctly and I can log into the created WiFi mc_guys2
 
-Now the raspberry is set up correctly and we can log into the created WiFi mc_guys2
 In this exercise I learned how to set up a raspberry pi with a flashed SD card and how to configure it.
 
 # IoT domains
@@ -95,22 +91,14 @@ Farming - Tracking soil health and climate.
 
 # Node onboard_blinker
 
-we copied the system_template and renamed it to onboard_blinker.
-Then we connected the ESP8266 and flashed it with the ulno software with the initialize command.
-Now we could control the led through WIFI with the console command
-It should be noted that the device needs about a minute to boot and set up. So you cant connect to the device in this time. This happened to us many of times and caused confusion.
-Now we can turn on the LED with the command onboardled onboardled.init(Pin.OUT)
-And turn it off with onboardled.on()
+I set up an LED which can be controlled with MQTT through an internet connection.
+//Link protocol
 
-It was confusing at first because the commands were inversed.
+At first I was a bit overwhelmed but after spending some time reading the ulnoiot documentation things got clearer and I could complete this exercise.
 
-Then we created a new output port/device for simple led. The used name will be appended to MQTT topic and a set appended to send commands to.
-Command: d("led", "blue", onboardled, "off", "on").
-After that we have to use the run() command to publish the device and make them accessible through the network.
-
-now we can turn on the led through MQTT with the command: mqtt_send onboard_blinker/blue/set on
 In this exercise I learned how to use the ESP8266. I have never worked with it before and it is remarkable how much you can do with such a small device.
-Also I used MQTT the first time and I like it so far.
+Also I used MQTT the first time and I like it so far. I think it is quite easy to set up controllable light source. The same steps could be used to control lights
+in my own home. This would not be too much work either which is impressive.
 
 # H&B Automation Term - what is it used for
 
@@ -125,23 +113,150 @@ Also I used MQTT the first time and I like it so far.
 # MQTT - NodeRed
 
 Task was to steer the blinker through a button. But both were on seperate devices only communicating through the WiFi.
-We followed the solution of Bernhard Hiesl & Denis Sivak //Link here
+I followed the solution of Bernhard Hiesl & Denis Sivak //Link here
 
-The MQTT commands caused us trouble because we forgot that we had to use them on the pi and not in the device console.
-Also we forgot to execute the run() command so all the MQTT set requests would not be executed.
+The MQTT commands caused us trouble because I forgot that I had to use them on the pi and not in the device console.
+Also I forgot to execute the run() command so all the MQTT set requests would not be executed.
 
-We also edited the autostart.py file of the devices so we didnt had to define the devices every time we connected it to the power.
-First we always flashed the device when editing the autostart.py to copy it onto the device but then we realised we could use the deploy command to copy it.
+I also edited the autostart.py file of the devices so I didnt had to define the devices every time I connected it to the power.
+First I always flashed the device when editing the autostart.py to copy it onto the device but then I realised I could use the deploy command to copy it.
 
 In this exercise I learned what NodeRed is and it looks like a very nice and convenient tool to define network processes. Also it was fascinating when it all worked.
-We had some trouble setting it all up but in retrospective it isnt hard at all.
+I had some trouble setting it all up but in retrospective it isnt hard at all.
 
 # Smart Lock
 
 Task was to control a magnetic lock through a graphical UI in the web using NodeRed.
 
-The lock would be steered through a relay(electrical switch). We connected one connector of the lock to the powersupply and the other to the relay.
-The relay was connected to the powersupply of the lock and the lock itself. Now we have to define a new device for the output port:
+The lock would be steered through a relay(electrical switch). I connected one connector of the lock to the power supply and the other to the relay.
+The relay was connected to the powersupply of the lock and the lock itself. Now I have to define a new device for the output port:
 d("out","output",d2);
 
-Now when we run the command output.evaluate() and the lock locks/unlocks which is pretty awesome.
+Now when I run the command output.evaluate() and the lock locks/unlocks which is pretty awesome.
+
+I had problems finding out how to set up the wiring correctly but in the end it worked nicely. But I may have used a wrong power supply for the lock because it became VERY hot.
+It even started to smell burned so I disabled the power of it. I tried to connect it with a weaker power supply but then the magnetic lock did not work properly because it was too weak.
+
+# Homeassistant install
+
+First install python 3
+execute pip3 install homeassistant
+execute py -m homeassistant --open-ui --> but error came up
+navigate to folder %APPDATA%/.homeassistant
+execute hass command
+open browser and navigate to localhost:8123
+homeassistant UI is opened
+
+I had problems installing Homeassistant on my Windows PC. The Installation guide for windows was a little bit hidden but I managed to find it. After I installed Python I tried
+to execute the commands stated in the guide but it took more than a hour to execute this command so I interrupted it.
+
+# Debate
+
+## PRO
+### Phase 1
+automated home examples, smart light, smart heating, energy consumption.
+Comparison smart home - normal human -> more happy, more comfortable
+happyness through convenience
+easy to install
+easy to upgrade
+=======================================================================
+Home automation is growing, a lot of customization
+market is becoming more open and accessible
+other devices have cameras too but not much security breaches there
+
+### Phase 2
+Eldery people:
+Elderly people can learn simple functionality like switching light on/off
+
+Security:
+Dont put cameras where you dont want them
+Turn on camera wiith key words
+Hackers are not interested
+Change password dont use default settings
+
+
+
+
+## CON
+### Phase 1
+hacked locks/camera, less security against thieves
+loss of privacy
+======================================================================
+too complex for older people
+costs are high
+experts are very expensive for installing home-automation systems
+
+### Phase 2
+Elderly people:
+Elderly people dont use smartphones they use phones with big buttons
+they like old stuff
+
+Security:
+Smart TVs record audio in living room and send to third parties
+Data is important and collection of it is very profitable
+
+
+
+## Questions:
+What is the security difference between normal locks and smart locks? Both can be cracked open/hacked?
+Same security problems with smartphone cameras but its different to see into the home vs into the inside of a pocket.
+How do you think homeautomation can help developing countries?
+
+# Bus presentatinos
+
+## zigbee
+for low power low bandwidth needs
+small scale projects
+simpler and cheaper
+not suitable for movable devices
+
+## zwave
+nodes can talk to each other
+low latency and reliable
+les energy than wifi but higher signalrange than bluetooth
+
+## SPI
+full duplex
+with shared clock
+
+## I2C
+clock transmitted by sender
+serveral speed grades (from 0.1 mbits to 3.4 mbits)
+
+## Onewire
+device communication bus system
+multiple slaves on 2 wires
+distance 300m
+
+## x10
+communication among electronc devices
+3kbits
+cheap available
+latency = 100 ms
+low reliability
+powerline device
+
+## knx
+succesor of EHS BartiBus
+9.6 kbits
+length 1km
+supports different bus topologies
+
+## ebus
+2wire serial bus100m
+2400baud
+used in heating and solar appliances
+
+## canbus
+used in vehicles
+used to replace copper
+1mbit @ 40m
+50kbits @ 1km
+multi master
+
+## Mobus
+own PLC
+standard for industrail electronic deviceseasy to deploy
+master/slave with unique adresses
+
+chosen: SPI, I2C, zigbee
