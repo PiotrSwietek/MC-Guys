@@ -93,7 +93,7 @@ Nothing here
 * Remonte control building environment
 * Automating building environment using sensors (light, temp)
 * monitoring
-* energy efficency
+* energy efficencygit
 * security (privacy)
 * entertainment
 * connect devices together
