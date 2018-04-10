@@ -132,7 +132,23 @@ In order to connect an ethernet device (like hue lamps) and connect to a local n
 * We stop here and wait for a solution from our professor
 
 ## Kodi
-...
+> Kodi (formerly XBMC) is a free and open-source media player software application developed by the XBMC Foundation - Wikipedia
+
+Goal is to control Kodi over MQTT and node-RED.
+
+* Download Kodi and install Kodi (https://kodi.tv/download)
+* Using node-RED plugin
+	* e.g. node-red-contrib-kodi via `npm install node-red-contrib-kodi`
+	* Adds nodes to node-RED, uses RPC (JSON-format) to control Kodi instance.
+* Using Kodi-AddOn
+	* e.g. Kodi2MQTT (https://github.com/owagner/kodi2mqtt)
+	* Download, load into <kodi-install-path>/addons/
+	* Enable addon
+		* Start Kodi
+		* Go to Add-ons/My add-ons/Services
+		* Change some basic settings, e.g. MQTT-broker ip, port, etc.
+	* Build nodes in node-RED (available topics see https://github.com/owagner/kodi2mqtt#topics)
+	* ![alt text](images/node-red_Kodi.PNG "Node-Red Kodi overview")
 
 # (old) notices
 
