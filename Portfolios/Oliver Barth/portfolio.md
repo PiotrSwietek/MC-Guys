@@ -132,3 +132,43 @@ Now that we are getting more and more familiar with *Node-RED*, there was this a
 [(Protocol)](../../Protocol/Protocol.md)
 
 Because I found out there is a special formatting sign for code snippets in markdown, I changed all the snippets inside the protocol to that formatting. Looks quite fancy now.
+
+### Project 1 - Discussion round
+Goal of this project was to get into an discussion about home and building automation topics.
+First of all we provided a video in our team, where there was a moderator (me), two pro and two con members. After notating three topics and the corresponding pro and con arguments on a whiteboard, the video recording was straightforward altough we all were quite unfamiliar with such discussion groups.
+
+The next part was a big discussion round in the lecture. Our team was the con, the other two teams split up into moderator and pro team.
+For this I brain-stormed some con arguments for the topics provided by the moderator team in order to be prepared for the lecture. Because I was the moderator in the video, I was out of discussion for that round, so I gave my notes to Manuel and Denis.
+I was a member of the audience then, below some notes and questions fro my side:
+
+#### General notes per team
+* Moderator
+   * Good inttroduction from Mona
+   * Nice wrap ups (summaries) from both
+
+* Pro
+   * Nice picture of home automation
+   * 15min to set up a home automation system? Quite optimistic...
+   * Too much input for an opening statement
+   * Nice counterattack to con-privacy issue
+   * Well prepared
+
+*  Con
+   * Short but precise on securtiy issues
+   * Clear statements (specializations) of both members
+   * Quickly got to the heart of the issues
+
+#### Questions
+* How much will collected data influence eg. insurances for elderly people?
+* Is there a misuse of collected data /tracking in public places / buildings?
+* Can home automation be a benefit for action forces like police, fire brigade?
+* With home automation elderly people will get lazy. Is that so good for their health hand fitness if they have no effort at all?
+* Lot of different home automation systems, is there a change for a single standard?
+* Alexa starts recording after the keyword? How is the keyword recorded then? (unclearly stated from pro team)
+
+### Protocols
+All in all there were about 10 different protocols which we should provide a small presentation on. We split up in groups, Piotr and I were responsible for rs-232, rs-422, rs-485 & DMX. After all the presentations I gained a really good overview about all the different protocols. Perfect teaching method for such things I think.
+
+### Project 2 - Automate your friends home
+We nearly missed the deadline for writing our scenario about our friends home automation system. But the result was quite satisfactory.
+Next step is to provide a shopping list of devices and gadgets for the home automation system.
