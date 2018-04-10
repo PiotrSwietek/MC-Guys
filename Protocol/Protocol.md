@@ -122,13 +122,15 @@ In order to connect an ethernet device (like hue lamps) and connect to a local n
 	* in ulnoiot/etc/ulnoiot.conf uncomment ulnoiot_ap_bridge=eth0
 * Plug in wifi-usb-adapter into Pi, conect the hue bridge via the ethernet port and reboot the Pi
 	* Pi should now connect to specified wifi and provide a working internet connection
+* Get list of all connected devices `arp -n` 
 * We have some problems with the internet connection, so we tried the hue app on Android to check if we can find the hue bridge
 	* App finds hue lamp
 	* After updating the bridge with the app, we get the the IP-address of the bridge 92.168.12.69
-* Get list of all connected devices `arp -n` 
+	* We can control the hue lamp remotely from our computer, guide provided here: https://www.developers.meethue.com/documentation/getting-started
+* Fixing internet issues on Pi (temporary, not working!)
+	* `sudo iptables -t nat -D POSTROUTING 1; sudo iptables -t nat -A POSTROUTING -s 192.168.12.1/24 -o wlan1 -j MASQUERADE`
+* We stop here and wait for a solution from our professor
 
-
-	
 ## Kodi
 ...
 
