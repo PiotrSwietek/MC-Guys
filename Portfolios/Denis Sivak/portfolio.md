@@ -103,6 +103,8 @@ so I thought it would be kind of important to take this class.
 	* Reading the buttons value in the Raspberry Console
 	
 ## Problems during the practical stuff
+	* One problem we had was that we didn't knew how to get the actual value of the button
+	* Also defining the mqtt action was problematic as we did not understand all the parameters
 	
 # Lecture 2
 
@@ -126,3 +128,92 @@ so I thought it would be kind of important to take this class.
 	
 	
 # Lecture 3
+
+## Summary of practical stuff done
+	* Setting up the door lock using an RFID card reader
+	* Setting up a temperature and humidity sensor
+	* Connecting the LCD display 
+	* Display of sensor data (temperature and humidity) on the LCD
+	
+## Problems during the practical stuff
+	* Connecting and setting up the servo was quite confusing 
+
+# Lecture 4
+
+## H&B Discussion: 
+	* Should everybody use home & building automation?
+	* Elderly people could have problems because its too complex
+	* Costs? Installation, Configuration, Maintenance
+	* Security and Privacy issues
+	
+## Bus & Protocol research
+
+### SPI: Serial Peripheral Interface
+
+* Synchronous serial communication (shared CLK)
+* Full Duplex mode using master-slave architecture (single master)
+* Slave select line to support multiple slave devices
+
+4 wires:
+	Clock (CLK)
+	Master Output Slave Input (MOSI)
+	Master Input Slave Output (MISO)
+	Slave Select (SS)
+
+Speed & Throughput:
+	The maximum throughput of the SPI will be limited by one of three factors: 
+	1.) Maximum available SPI clock
+	2.) Ability of CPU to service SPI data.
+	3.) Output driver strength (how fast a signal can the PCB carry)
+	
+Latency:
+	Can be as low as one clock cycle.
+
+Length:
+	8-bit register indicates the SPI frame length (16, 24, or 32 bit)
+
+Importance:
+	* de facto standard for short distance communication
+	* primarily used in embedded systems
+
+Usage Example:
+	* Used to talk to a variety of peipherals
+		* Sensors
+		* Memory
+		* LCDs
+		* Camera lenses
+		* ....
+	* RFID reader we used in the lecture
+
+Domain:
+	* Embedded systems
+
+### Other busses & protocols
+	* RS232, RS442, RS485, DMX
+	* Onewire/X10
+	* Zwire/ZigBee
+	* KNX-bus/E-bus
+	* Modbus/CANbus
+	
+### Favorite busses & protocols
+	* SPI
+	* I2C
+	* ZigBee
+	
+## OpenHAB
+We tried to get OpenHAB running. Unfortunately, we had some problems on our machines which cost too much time, so we didn't finish the OpenHAB stuff in time.
+	
+# Lecture 5
+
+## KNX eCampus
+In the beginning of the lecture, we started the KNX eCampus which is basically a set of tutorials for the use of the KNX bus/protocol. The tutorials also include
+simulations and quizzes which had to be completed. After completing all of the tutorials, a KNX certificate is achieved. 
+Personally I found that the tutorial was very simple but it showed the basic usage and setup of the software with the devices which could be useful in the future.
+
+## MQTT Simulator
+A temperature sensor was simulated by creating a UI slider in Node-RED. The slider value sets the actual temperature to be broadcasted over mqtt.
+For that, we had to install Node-RED locally on our machines. We learned that it has to be installed via the Windows Powershell using the command
+"npm install -g --unsafe-perm node-red". Before that, Node-JS has to be installed for it to work.
+One of the problems we had to create a (local) server where the actual messages from the simulator are received. 
+
+## 
