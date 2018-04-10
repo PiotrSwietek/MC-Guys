@@ -137,6 +137,15 @@ Now when I run the command output.evaluate() and the lock locks/unlocks which is
 I had problems finding out how to set up the wiring correctly but in the end it worked nicely. But I may have used a wrong power supply for the lock because it became VERY hot.
 It even started to smell burned so I disabled the power of it. I tried to connect it with a weaker power supply but then the magnetic lock did not work properly because it was too weak.
 
+# Temperature and Humidity + LCD
+
+Task was to set up a temperature and humidity sensor which is connected to the LCD display. The LCD should show the temperature and humidity in real time.
+
+The temperature setup was no problem at all. Because it was the same procedure with all other nodes. The LCD on the other hand did create some problems.
+First I connected the LCD wrong with the controller so I did not work at all. But after reading the documentation it worked properly.
+The next problem was to create a script in NodeRed which deletes all existing text on the LCD and prints the temperature and humidity. After some time I managed to 
+write this script.
+
 # Homeassistant install
 
 First install python 3
