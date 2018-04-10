@@ -125,8 +125,8 @@ so I thought it would be kind of important to take this class.
 	* Implemented doorlock to open with GUI buttons using Node RED
 	
 ## Problems during the practical stuff
-	
-	
+	* 
+
 # Lecture 3
 
 ## Summary of practical stuff done
@@ -145,6 +145,8 @@ so I thought it would be kind of important to take this class.
 	* Elderly people could have problems because its too complex
 	* Costs? Installation, Configuration, Maintenance
 	* Security and Privacy issues
+	* Using H&B can also help elderly or disabled people
+	* Centralized control helps gaining convenience and comfort
 	
 ## Bus & Protocol research
 
@@ -154,29 +156,29 @@ so I thought it would be kind of important to take this class.
 * Full Duplex mode using master-slave architecture (single master)
 * Slave select line to support multiple slave devices
 
-4 wires:
+#### 4 wires:
 	Clock (CLK)
 	Master Output Slave Input (MOSI)
 	Master Input Slave Output (MISO)
 	Slave Select (SS)
 
-Speed & Throughput:
+#### Speed & Throughput:
 	The maximum throughput of the SPI will be limited by one of three factors: 
 	1.) Maximum available SPI clock
 	2.) Ability of CPU to service SPI data.
 	3.) Output driver strength (how fast a signal can the PCB carry)
 	
-Latency:
+#### Latency:
 	Can be as low as one clock cycle.
 
-Length:
+#### Length:
 	8-bit register indicates the SPI frame length (16, 24, or 32 bit)
 
-Importance:
+#### Importance:
 	* de facto standard for short distance communication
 	* primarily used in embedded systems
 
-Usage Example:
+#### Usage Example:
 	* Used to talk to a variety of peipherals
 		* Sensors
 		* Memory
@@ -185,7 +187,7 @@ Usage Example:
 		* ....
 	* RFID reader we used in the lecture
 
-Domain:
+#### Domain:
 	* Embedded systems
 
 ### Other busses & protocols
@@ -211,9 +213,7 @@ simulations and quizzes which had to be completed. After completing all of the t
 Personally I found that the tutorial was very simple but it showed the basic usage and setup of the software with the devices which could be useful in the future.
 
 ## MQTT Simulator
-A temperature sensor was simulated by creating a UI slider in Node-RED. The slider value sets the actual temperature to be broadcasted over mqtt.
-For that, we had to install Node-RED locally on our machines. We learned that it has to be installed via the Windows Powershell using the command
-"npm install -g --unsafe-perm node-red". Before that, Node-JS has to be installed for it to work.
-One of the problems we had to create a (local) server where the actual messages from the simulator are received. 
+For this task we used node RED. Therefore, a button was added to the UI which sends a message to the mqtt broker on the PI. When the PI receives the message, the signal
+is forwarded to the PC, which then plays an audio file.
 
 ## 
