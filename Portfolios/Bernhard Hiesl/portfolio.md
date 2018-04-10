@@ -100,7 +100,7 @@ Nothing here
 * convenience
 * Transparancy
 
-## Exercises
+## 19.3.2018
 
 ### Setup the Raspberry Pi
 
@@ -109,11 +109,33 @@ First of all we flashed the prepared image on the raspberry pi. After the flashi
 ### IoT Node
 The second part of the lecture we went through the given tutorial with the topic IoT Node. Here we had to flash also a prepared image on the Wemos D1 Mini. After this process we were able to disconnect it from the pi, connect it again to another usb port and reconnect again via the pi by go into the node folder and execute the console command.
 
+## 22.3.2018
+
 ### Configure different nodes
 In the second lecutre our task was to turn on/off a led with a button on another Wemos D1 Mini. To do this, we needed to flash another image on the Mini. On node1 we created a device "LED" and on the node2 we created a "BUTTON". With the run command the Mini publishes his events and with mqtt we configured paths (mqtt_action) so if the button got pressed on node2 the led on node1 gets toggled.
 
 ### Node RED
+The next task was to confiugre a simple lock/unlock button with Noder RED. If you click this butten the lock should be locked/unlocked. So Node RED provides us a UI.
+
+## 23.3.2018
+
+### Control servo/lock vai a RFID-reader
 TODO!
+
+### Showing temp/humidity on LCD-display
+TODO!
+
+## 4.4.2018
+### OpenHAB
+
+### Debate
+#### PRO
+
+#### CON
+
+### Bus/Protocols
+
+## 10.4.2018
 
 ## Problems & Lessons Learned
 ### SSH
