@@ -172,3 +172,7 @@ All in all there were about 10 different protocols which we should provide a sma
 ### Project 2 - Automate your friends home
 We nearly missed the deadline for writing our scenario about our friends home automation system. But the result was quite satisfactory.
 Next step is to provide a shopping list of devices and gadgets for the home automation system.
+
+### KNX certificate
+Quite easy, no further issues.
+Certificate can be found [(here)](knxcertification_barth.pdf).
