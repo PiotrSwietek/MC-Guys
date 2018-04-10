@@ -165,3 +165,10 @@ I was a member of the audience then, below some notes and questions fro my side:
 * With home automation elderly people will get lazy. Is that so good for their health hand fitness if they have no effort at all?
 * Lot of different home automation systems, is there a change for a single standard?
 * Alexa starts recording after the keyword? How is the keyword recorded then? (unclearly stated from pro team)
+
+### Protocols
+All in all there were about 10 different protocols which we should provide a small presentation on. We split up in groups, Piotr and I were responsible for rs-232, rs-422, rs-485 & DMX. After all the presentations I gained a really good overview about all the different protocols. Perfect teaching method for such things I think.
+
+### Project 2 - Automate your friends home
+We nearly missed the deadline for writing our scenario about our friends home automation system. But the result was quite satisfactory.
+Next step is to provide a shopping list of devices and gadgets for the home automation system.
