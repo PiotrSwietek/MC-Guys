@@ -180,7 +180,9 @@ Certificate can be found [(here)](knxcertification_barth.pdf).
 
 ### HUE lamp & Kodi
 HUE [(Protocol)](../../Protocol/Protocol.md#philips-hue-lamps)
+
 Goal was to set up the Philips HUE lamps and control it over the Pi. Because we control the hue-bridge over the ethernet port we have no active internet connection. So the first thing have to set up a Wifi-usb-adapter to bridge the internet connection. That causes some troubles, we do not got some internet connection, that was quite frustrating for me. At least we could control the HUE lamp locally from our computers. Maybe we introduce some disco light next lession. 
 
 Kodi [(Protocol)](../../Protocol/Protocol.md#kodi)
+
 Kodi is an entertainment platform which we also should control over MQTT over node-RED. There is a node-RED plugin available which provides own nodes for the interface and uses RPCs to control Kodi, but there were some connection issues in node-RED, although Kodi was accessable via a web interface. After some trial-and-error approaches, I swapped to a plugin for Kodi itself which listens and sends out MQTT-messages for some basic actions. 
