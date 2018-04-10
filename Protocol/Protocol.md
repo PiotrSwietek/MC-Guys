@@ -113,15 +113,20 @@ Because of time savings, we used node-RED for that task.
 * Set up some UI-elements which sends commands (some kind of simulator), e.g., ![alt text](images/node-red_simulator "Node-RED MQTT-simulator")
 
 ## Philips HUE lamps
-In order to connect an ethernet device (like HUE lamps) and connect to a local network, the Pi must use a separate (wifi) connection to get internet access again. We have an wifi-usb-adapter, so we go for that one.
+In order to connect an ethernet device (like hue lamps) and connect to a local network, the Pi must use a separate (wifi) connection to get internet access again. We have an wifi-usb-adapter, so we go for that one.
 
 * Connect to pi wifi, connect via ssh
 * Enable wifi inputs (use `sudo` commands)
 	* in boot/config.txt uncomment and change uiot_wifi_name=fhhgb-guest and uiot_wifi_password=AIF533EAy504CF
 * Enable access point bridge
 	* in ulnoiot/etc/ulnoiot.conf uncomment ulnoiot_ap_bridge=eth0
-* Plug in wifi-usb-adapter into Pi and reboot
-	* Pi should now connect to specified wifi
+* Plug in wifi-usb-adapter into Pi, conect the hue bridge via the ethernet port and reboot the Pi
+	* Pi should now connect to specified wifi and provide a working internet connection
+* We have some problems with the internet connection, so we tried the hue app on Android to check if we can find the hue bridge
+	* App finds hue lamp
+	* After updating the bridge with the app, we get the the IP-address of the bridge 92.168.12.69
+* Get list of all connected devices `arp -n` 
+
 
 	
 ## Kodi
