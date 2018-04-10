@@ -88,9 +88,44 @@ Trigger a lock (12V) with a relay controlled by a button.
 	* ![alt text](images/node-red_LCD.PNG "Node-Red LCD function")
 	
 	
+# 03.04.2018
+Home and building automation discussion round with pro, con (us) and a moderator team about certain topics.
 	
-	
+# 10.04.2018
+## KNX certificate
+In order to get familiar with KNX bus protocol, we made the KNX-certificate couse on https://www.knx.org/knx-en/training/knx-eacademy/ets-ecampus/index.php.
 
+Steps to take
+* Sign up to KNX eCampus (free)
+* Do the basic certificates course
+* Get a certificate (at least 90%)
+
+Individual certificates can be found in every persons private folder.
+
+
+## MQTT simulator
+Goal of this exercise is to "program" an MQTT-simulator. We can either program it by ourselves, or use node-RED using the dashboard.
+
+Because of time savings, we used node-RED for that task.
+
+* Download node-RED to the computer via npm `npm install -g --unsafe-pem node-red`
+* Download node-RED dashboard via `npm install node-red-dashboard`
+* Set up some UI-elements which sends commands (some kind of simulator), e.g., ![alt text](images/node-red_simulator "Node-RED MQTT-simulator")
+
+## Philips HUE lamps
+In order to connect an ethernet device (like HUE lamps) and connect to a local network, the Pi must use a separate (wifi) connection to get internet access again. We have an wifi-usb-adapter, so we go for that one.
+
+* Connect to pi wifi, connect via ssh
+* Enable wifi inputs (use `sudo` commands)
+	* in boot/config.txt uncomment and change uiot_wifi_name=fhhgb-guest and uiot_wifi_password=AIF533EAy504CF
+* Enable access point bridge
+	* in ulnoiot/etc/ulnoiot.conf uncomment ulnoiot_ap_bridge=eth0
+* Plug in wifi-usb-adapter into Pi and reboot
+	* Pi should now connect to specified wifi
+
+	
+## Kodi
+...
 
 # (old) notices
 
