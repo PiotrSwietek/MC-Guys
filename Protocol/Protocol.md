@@ -131,6 +131,22 @@ In order to connect an ethernet device (like hue lamps) and connect to a local n
 	* `sudo iptables -t nat -D POSTROUTING 1; sudo iptables -t nat -A POSTROUTING -s 192.168.12.1/24 -o wlan1 -j MASQUERADE`
 * We stop here and wait for a solution from our professor
 
+* Next try with new setup, updated ulnoiot on the Pi, getting a switch and a USB-LAN adapter.
+* Updated config files (see above)
+* After reboot, connect Pi with USB-LAN adapter and LAN to switch, and the switch with the hue-bridge via LAN.
+* Connect to Pi, load package node-red-contrib-huemagic in the node-RED interface including different HueMagic nodes.
+* Setup the lamp
+	* Include Hue Light node
+	* Select bridge inside node (tap on bridge to activate)
+	* Select light (Hue color lamp 1)
+* Build up node-Red configuration depending on your use-case, e.g. build a dashboard on node-red to control Hue lamp
+* ![alt text](images/hue_setup.JPG "Hue setup")
+* ![alt text](images/hueflow.png "Hue node-Red")
+* ![alt text](images/hue-gui.PNG "Hue node-Red UI")
+* ![alt text](images/hue_lamp.JPG "Hue lamp")
+
+
+
 ## Kodi
 > Kodi (formerly XBMC) is a free and open-source media player software application developed by the XBMC Foundation - Wikipedia
 
