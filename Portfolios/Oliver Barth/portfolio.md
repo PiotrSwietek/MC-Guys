@@ -175,6 +175,7 @@ Next step is to provide a shopping list of devices and gadgets for the home auto
 
 ### KNX certificate
 [(Protocol)](../../Protocol/Protocol.md#knx-certificate)
+
 Quite easy, no further issues.
 Certificate can be found [(here)](knxcertification_barth.pdf).
 
@@ -189,7 +190,9 @@ Kodi is an entertainment platform which we also should control over MQTT over no
 
 ### Hue lamp & Kodi continued
 Kodi [(Protocol)](../../Protocol/Protocol.md#kodi)
+
 After some issues last session, I worked on the Kodi setup with the MQTT plugin. I was quite confident that the node-red flow was correct, but it didn't worked either. After double check all the configuration, I restarted the Kodi platform and it finally worked. 90% working on that was a waste of time I guess.
 
 HUE [(Protocol)](../../Protocol/Protocol.md#philips-hue-lamps)
+
 After setting up Kodi, I helped Piotr with the Hue lamps. Now the new setup works very well, but the node-Red flow was tricky that time. Because we want to control all the possible hue stuff stuff, the configuration becomes quite complex (see protocol), but we finally made it. And after all, for me it was quite funny to play around with them.
