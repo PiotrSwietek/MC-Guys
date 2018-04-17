@@ -186,3 +186,10 @@ Goal was to set up the Philips HUE lamps and control it over the Pi. Because we 
 Kodi [(Protocol)](../../Protocol/Protocol.md#kodi)
 
 Kodi is an entertainment platform which we also should control over MQTT over node-RED. There is a node-RED plugin available which provides own nodes for the interface and uses RPCs to control Kodi, but there were some connection issues in node-RED, although Kodi was accessable via a web interface. After some trial-and-error approaches, I swapped to a plugin for Kodi itself which listens and sends out MQTT-messages for some basic actions. 
+
+### Hue lamp & Kodi continued
+Kodi [(Protocol)](../../Protocol/Protocol.md#kodi)
+After some issues last session, I worked on the Kodi setup with the MQTT plugin. I was quite confident that the node-red flow was correct, but it didn't worked either. After double check all the configuration, I restarted the Kodi platform and it finally worked. 90% working on that was a waste of time I guess.
+
+HUE [(Protocol)](../../Protocol/Protocol.md#philips-hue-lamps)
+After setting up Kodi, I helped Piotr with the Hue lamps. Now the new setup works very well, but the node-Red flow was tricky that time. Because we want to control all the possible hue stuff stuff, the configuration becomes quite complex (see protocol), but we finally made it. And after all, for me it was quite funny to play around with them.
