@@ -39,7 +39,6 @@ Nothing here
 #### Weirdness/crazyness
 Nothing here
 
-
 ### Siemens
 
 #### Scenarios and application domains
@@ -93,14 +92,14 @@ Nothing here
 * Remonte control building environment
 * Automating building environment using sensors (light, temp)
 * monitoring
-* energy efficency
+* energy efficencygit
 * security (privacy)
 * entertainment
 * connect devices together
 * convenience
 * Transparancy
 
-## Exercises
+## 19.3.2018
 
 ### Setup the Raspberry Pi
 
@@ -109,11 +108,84 @@ First of all we flashed the prepared image on the raspberry pi. After the flashi
 ### IoT Node
 The second part of the lecture we went through the given tutorial with the topic IoT Node. Here we had to flash also a prepared image on the Wemos D1 Mini. After this process we were able to disconnect it from the pi, connect it again to another usb port and reconnect again via the pi by go into the node folder and execute the console command.
 
+### Recap
+
+## 22.3.2018
+
 ### Configure different nodes
 In the second lecutre our task was to turn on/off a led with a button on another Wemos D1 Mini. To do this, we needed to flash another image on the Mini. On node1 we created a device "LED" and on the node2 we created a "BUTTON". With the run command the Mini publishes his events and with mqtt we configured paths (mqtt_action) so if the button got pressed on node2 the led on node1 gets toggled.
 
 ### Node RED
+The next task was to confiugre a simple lock/unlock button with Noder RED. If you click this butten the lock should be locked/unlocked. So Node RED provides us a UI.
+
+### Recap
+
+## 23.3.2018
+
+### Control servo/lock vai a RFID-reader
 TODO!
+
+### Showing temp/humidity on LCD-display
+TODO!
+
+## 4.4.2018
+### OpenHAB
+We downloaded and installed OpenHAB, but as we tried to start it as a service Windows refused this option. So everytime we want to use OpenHAB we have to start it manually.
+
+### Debate
+#### PRO
+* More convenience
+* Everything is smart and connected
+* Growing industry
+* energy efficiency
+* fully automated tasks
+
+#### CON
+* less privacy
+* another entrance for hackers
+* complex
+
+### Bus/Protocols
+#### I2C
+* I2C = Inter-Integrated Curcuit
+* Designed by Philips
+* Resent version = Version 6
+* Serial and Half-duplex
+* simple master/slave relationship
+* multi-master bus arbitration and collision detection
+
+* Speed: The clock is transmitted by the sender and the receiver is always able to synchronize with that clock. I2C defines several speed grades but * the term baud rate is quite unusual in this context.
+* Throughput:  0.1 standrad mode / 0.4 full speed / 1.0 fast mode / 3.4 highspeed (depending on mode)   
+* Length:  So the maximum bus length of an I2C link is about 1 meter at 100 Kbaud, or 10 meters at 10 Kbaud
+* Usage example: micro controller, components connected via cable, control architectures such as System Management Bus (SMBus), Power
+Management Bus (PMBus), Intelligent Platform Management Interface (IPMI), Display Data Channel (DDC) and Advanced Telecom Computing Architecture (ATCA).
+
+#### Other
+
+* RS232, RS442, RS485, DMX
+* Onewire/X10
+* Zwire/ZigBee
+* KNX-bus/E-bus
+* Modbus/CANbus
+
+#### Favourite Bus/Protocols
+* I2C
+* SPI
+* Zegbee
+
+### Recap
+
+## 10.4.2018
+
+### KNX lecture
+
+### MQTT Simulator
+
+### Philips Hue
+
+### Recap
+
+
 
 ## Problems & Lessons Learned
 ### SSH

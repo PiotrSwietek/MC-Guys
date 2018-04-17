@@ -106,7 +106,7 @@ One of the hardest steps was actually getting the commands right to register a d
 
 Goal is to set up a "Hello World program" in the sense of home automation: Triggering a button of one node turns a LED on/off on the other node.
 
-Setting up the nodes was quite easy because we already knew the commands needed. The big question was, how to set up the connection to forward the button signal to the other node. With the help of our team-mates, we finally figured that out. Understanding the architecture behind our setup (Pi is our MQTT-broker as well) and what that means was not that clear for the others, because they were completley unfamiliar with the MQTT-protocol. Fixing it with the short intro from our professor inbetween made that more clear for us all.
+Setting up the nodes was quite easy because we already knew the commands needed. The big question was, how to set up the connection to forward the button signal to the other node. With the help of our team-mates, we finally figured that out. Understanding the architecture behind our setup (Pi is our MQTT-broker as well) and what that means was not that clear for the others and myself, because we were fairly unfamiliar with the MQTT-protocol. Fixing it with the short intro from our professor inbetween made that more clear for us all.
 
 ### Advanced Hello World
 [(Protocol)](../../Protocol/Protocol.md#relay)
@@ -120,13 +120,13 @@ We only had to set up the relay on our controller and wiring all together. For t
 For that task I was responsible for extending our protocol and wiring up the RFID-reader on our controller. Thanks to the docs from our professor no problems occured.
 Together we set up all devices. The main question was how we can trigger the lock with an RFID-card? We could not simply forward the input from the card to the other node, there must be some logic in between. Because we do not want to code (look for the right console-commands), we used *Node-RED* for that task. 
 
-After getting through some basic tutorials (and I think that was absolutely neccesary to get an idea what is going on) we finally set up a function to filter out the ID of the card to check if it is a valid one and then forwards on or off to the other node. 
+After getting through some basic tutorials (and I think that was absolutely neccesary to get an idea what is going on) I finally set up a function to filter out the ID of the card to check if it is a valid one and then forwards on or off to the other node. 
 
 ### Showing temp/humidity on LCD-display
 [(Protocol)](../../Protocol/Protocol.md#showing-temphumidity-on-lcd-display)
 
 Again I was responsible for extending the protocol. 
-Now that we are getting more and more familiar with *Node-RED*, there was this advanced exercise for us. Setting up devices was quite easy that time, the focus lay on the MQTT-fowarding stuff. We were quite unsure what functions we should use for our problem, because we needed to combine the two sensor values and clearing somehow the display if new messages arrive. After some trial and error approaches and the help of our team-mates, we finally made it.
+Now that we are getting more and more familiar with *Node-RED*, there was this advanced exercise for us. Setting up devices was quite easy that time, the focus lay on the MQTT-fowarding stuff. I was quite unsure what functions we should use for our problem, because we needed to combine the two sensor values and clearing somehow the display if new messages arrive. After some trial and error approaches and the help of our team-mates, we finally made it togehter.
 
 ### Off topic
 [(Protocol)](../../Protocol/Protocol.md)
@@ -135,10 +135,10 @@ Because I found out there is a special formatting sign for code snippets in mark
 
 ### Project 1 - Discussion round
 Goal of this project was to get into an discussion about home and building automation topics.
-First of all we provided a video in our team, where there was a moderator (me), two pro and two con members. After notating three topics and the corresponding pro and con arguments on a whiteboard, the video recording was straightforward altough we all were quite unfamiliar with such discussion groups.
+First of all we provided a video in our team, where there was a moderator (me), two pro and two con members. Because none of the others wanted to be moderator, I volunteered (what saved me from the big discussion round the next session). After notating three topics and the corresponding pro and con arguments on a whiteboard, the video recording was straightforward altough we all were quite unfamiliar with such discussion groups.
 
 The next part was a big discussion round in the lecture. Our team was the con, the other two teams split up into moderator and pro team.
-For this I brain-stormed some con arguments for the topics provided by the moderator team in order to be prepared for the lecture. Because I was the moderator in the video, I was out of discussion for that round, so I gave my notes to Manuel and Denis.
+For this I brain-stormed some con arguments for the topics provided by the moderator team in order to be prepared for the lecture. Because I was the moderator in the video the week before, I was out of discussion for that round, so I gave my notes to Manuel and Denis.
 I was a member of the audience then, below some notes and questions fro my side:
 
 #### General notes per team
@@ -166,9 +166,23 @@ I was a member of the audience then, below some notes and questions fro my side:
 * Lot of different home automation systems, is there a change for a single standard?
 * Alexa starts recording after the keyword? How is the keyword recorded then? (unclearly stated from pro team)
 
-### Protocols
+### Bus-Protocols
 All in all there were about 10 different protocols which we should provide a small presentation on. We split up in groups, Piotr and I were responsible for rs-232, rs-422, rs-485 & DMX. After all the presentations I gained a really good overview about all the different protocols. Perfect teaching method for such things I think.
 
 ### Project 2 - Automate your friends home
 We nearly missed the deadline for writing our scenario about our friends home automation system. But the result was quite satisfactory.
 Next step is to provide a shopping list of devices and gadgets for the home automation system.
+
+### KNX certificate
+[(Protocol)](../../Protocol/Protocol.md#knx-certificate)
+Quite easy, no further issues.
+Certificate can be found [(here)](knxcertification_barth.pdf).
+
+### HUE lamp & Kodi
+HUE [(Protocol)](../../Protocol/Protocol.md#philips-hue-lamps)
+
+Goal was to set up the Philips HUE lamps and control it over the Pi. Because we control the hue-bridge over the ethernet port we have no active internet connection. So the first thing have to set up a Wifi-usb-adapter to bridge the internet connection. That causes some troubles, we do not got some internet connection, that was quite frustrating for me. At least we could control the HUE lamp locally from our computers. Maybe we introduce some disco light next lession. 
+
+Kodi [(Protocol)](../../Protocol/Protocol.md#kodi)
+
+Kodi is an entertainment platform which we also should control over MQTT over node-RED. There is a node-RED plugin available which provides own nodes for the interface and uses RPCs to control Kodi, but there were some connection issues in node-RED, although Kodi was accessable via a web interface. After some trial-and-error approaches, I swapped to a plugin for Kodi itself which listens and sends out MQTT-messages for some basic actions. 

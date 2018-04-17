@@ -88,9 +88,74 @@ Trigger a lock (12V) with a relay controlled by a button.
 	* ![alt text](images/node-red_LCD.PNG "Node-Red LCD function")
 	
 	
+# 03.04.2018
+Home and building automation discussion round with pro, con (us) and a moderator team about certain topics.
 	
-	
+# 10.04.2018
+## KNX certificate
+In order to get familiar with KNX bus protocol, we made the KNX-certificate couse on https://www.knx.org/knx-en/training/knx-eacademy/ets-ecampus/index.php.
 
+Steps to take
+* Sign up to KNX eCampus (free)
+* Do the basic certificates course
+* Get a certificate (at least 90%)
+
+Individual certificates can be found in every persons private folder.
+
+
+## MQTT simulator
+Goal of this exercise is to "program" an MQTT-simulator. We can either program it by ourselves, or use node-RED using the dashboard.
+
+Because of time savings, we used node-RED for that task.
+
+* Download node-RED to the computer via npm `npm install -g --unsafe-pem node-red`
+* Download node-RED dashboard via `npm install node-red-dashboard`
+* Set up some UI-elements which sends commands (some kind of simulator), e.g., ![alt text](images/node-red_simulator "Node-RED MQTT-simulator")
+
+## Philips HUE lamps
+In order to connect an ethernet device (like hue lamps) and connect to a local network, the Pi must use a separate (wifi) connection to get internet access again. We have an wifi-usb-adapter, so we go for that one.
+
+* Connect to pi wifi, connect via ssh
+* Enable wifi inputs (use `sudo` commands)
+	* in boot/config.txt uncomment and change uiot_wifi_name=fhhgb-guest and uiot_wifi_password=AIF533EAy504CF
+* Enable access point bridge
+	* in ulnoiot/etc/ulnoiot.conf uncomment ulnoiot_ap_bridge=eth0
+* Plug in wifi-usb-adapter into Pi, conect the hue bridge via the ethernet port and reboot the Pi
+	* Pi should now connect to specified wifi and provide a working internet connection
+* Get list of all connected devices `arp -n` 
+* We have some problems with the internet connection, so we tried the hue app on Android to check if we can find the hue bridge
+	* App finds hue lamp
+	* After updating the bridge with the app, we get the the IP-address of the bridge 92.168.12.69
+	* We can control the hue lamp remotely from our computer, guide provided here: https://www.developers.meethue.com/documentation/getting-started
+* Fixing internet issues on Pi (temporary, not working!)
+	* `sudo iptables -t nat -D POSTROUTING 1; sudo iptables -t nat -A POSTROUTING -s 192.168.12.1/24 -o wlan1 -j MASQUERADE`
+* We stop here and wait for a solution from our professor
+
+## Kodi
+> Kodi (formerly XBMC) is a free and open-source media player software application developed by the XBMC Foundation - Wikipedia
+
+Goal is to control Kodi over MQTT and node-RED.
+
+* Download Kodi and install Kodi (https://kodi.tv/download)
+* Using node-RED plugin
+	* e.g. node-red-contrib-kodi via `npm install node-red-contrib-kodi`
+	* Adds nodes to node-RED, uses RPC (JSON-format) to control Kodi instance.
+* Using Kodi-AddOn
+	* e.g. Kodi2MQTT (https://github.com/owagner/kodi2mqtt)
+	* Download, load into <kodi-install-path>/addons/
+	* Enable addon
+		* Start Kodi
+		* Go to Add-ons/My add-ons/Services
+		* Change some basic settings, e.g. MQTT-broker ip, port, etc., e.g. 
+![alt text](images/kodi_setting.PNG "Kodi plugin settings")
+	* Build nodes in node-RED (available topics see https://github.com/owagner/kodi2mqtt#topics)
+	* Node-Red configuration
+![alt text](images/kodi_node-red.PNG "Node-Red Kodi overview")
+	* Kodi player sends now commands to the topic and can be toggled via the UI-button
+	* Kodi sends commands when toggle play/pause
+![alt text](images/kodi_toggle_player.PNG "Toggle Kodi in the player")
+	* Kodi toggle via the UI-button
+![alt text](images/kodi_toggle_button.PNG "Toggle Kodi via the button")
 
 # (old) notices
 

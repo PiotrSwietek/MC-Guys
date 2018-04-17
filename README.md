@@ -12,3 +12,8 @@ To provide our own view of the lecture, you can find our portfolios here:
 * [Manuels Portfolio](Portfolios/Manuel%20Mühlschuster/portfolio.md)
 * [Piotrs Portfolio](Portfolios/Piotr%20Swietek/portfolio.md)
 * [Olivers Portfolio](Portfolios/Oliver%20Barth/portfolio.md)
+
+## Projects
+Project files can be found here:
+* Project 1: Discussion round, no documents
+* [Project 2](Projects/project2): Automate your friends home 
