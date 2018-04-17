@@ -186,7 +186,21 @@ Goal was to set up the Philips HUE lamps and control it over the Pi. Because we 
 
 Kodi [(Protocol)](../../Protocol/Protocol.md#kodi)
 
-Kodi is an entertainment platform which we also should control over MQTT over node-RED. There is a node-RED plugin available which provides own nodes for the interface and uses RPCs to control Kodi, but there were some connection issues in node-RED, although Kodi was accessable via a web interface. After some trial-and-error approaches, I swapped to a plugin for Kodi itself which listens and sends out MQTT-messages for some basic actions. 
+Kodi is an entertainment platform which we also should control over MQTT over node-RED. There is a node-RED plugin available which provides own nodes for the interface and uses RPCs to control Kodi, but there were some connection issues in node-RED, although Kodi was accessable via a web interface. After some trial-and-error approaches, I swapped to a plugin for Kodi itself which listens and sends out MQTT-messages for some basic actions.
+
+### Project 2
+[(Project 2)](../../Projects/project2)
+
+Some notes and questions about the project 2 presentations
+* ENI (Internationals)
+   * Why Amazon Echo? What about Google, etc.?
+   * NFC card vs fingerprint? I would have some security concerns...
+   * Own apps are overkill for your friends house
+
+* ENI
+   * Nice mini server expanples, detailed presentation, but too long presentation
+   * Could be a tech presentation...
+   * Are there only loxone components to integrated? What about Homematic devices, etc.?
 
 ### Hue lamp & Kodi continued
 Kodi [(Protocol)](../../Protocol/Protocol.md#kodi)
