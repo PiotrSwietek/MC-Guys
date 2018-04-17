@@ -146,12 +146,16 @@ Goal is to control Kodi over MQTT and node-RED.
 	* Enable addon
 		* Start Kodi
 		* Go to Add-ons/My add-ons/Services
-		* Change some basic settings, e.g. MQTT-broker ip, port, etc., e.g. ![alt text](images/kodi_setting.PNG "Kodi plugin settings")
+		* Change some basic settings, e.g. MQTT-broker ip, port, etc., e.g. 
+![alt text](images/kodi_setting.PNG "Kodi plugin settings")
 	* Build nodes in node-RED (available topics see https://github.com/owagner/kodi2mqtt#topics)
-	* ![alt text](images/kodi_node-red.PNG "Node-Red Kodi overview")
+	* Node-Red configuration
+![alt text](images/kodi_node-red.PNG "Node-Red Kodi overview")
 	* Kodi player sends now commands to the topic and can be toggled via the UI-button
-	* ![alt text](images/kodi_toggle_player.PNG "Toggle Kodi in the player")
-	* ![alt text](images/kodi_toggle_button.PNG "Toggle Kodi via the button")
+	* Kodi sends commands when toggle play/pause
+![alt text](images/kodi_toggle_player.PNG "Toggle Kodi in the player")
+	* Kodi toggle via the UI-button
+![alt text](images/kodi_toggle_button.PNG "Toggle Kodi via the button")
 
 # (old) notices
 
