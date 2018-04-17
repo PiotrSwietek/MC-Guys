@@ -112,6 +112,7 @@ Because of time savings, we used node-RED for that task.
 * Download node-RED dashboard via `npm install node-red-dashboard`
 * Set up some UI-elements which sends commands (some kind of simulator), e.g., ![alt text](images/node-red_simulator "Node-RED MQTT-simulator")
 
+# 10.04.2018/17.04.2018
 ## Philips HUE lamps
 In order to connect an ethernet device (like hue lamps) and connect to a local network, the Pi must use a separate (wifi) connection to get internet access again. We have an wifi-usb-adapter, so we go for that one.
 
