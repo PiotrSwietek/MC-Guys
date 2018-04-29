@@ -219,12 +219,31 @@ Because of the reschedule of the our time table, I was not able to attend to thi
 
 Goal of the project was to implement some usage scenarios from our project 2 when we automated our friends home. Because our usage scenario was already very well set up, we just splitted it into different sections. 
 
-We met for two days to build the final project. Because we wanted to use stuff we already did in the lecture, finding the right work packages was quite easy for us: everyone does what he has already done (see [(Work packages)](../../Projects/project3/work-packages.png). This decision speed up our implementation a lot.
+We met for two days to build the final project. Because we wanted to use stuff we already did in the lecture, finding the right work packages was quite easy for us: everyone does what he has already done (see [Work packages](../../Projects/project3/work-packages.PNG). This decision speed up our implementation a lot.
 
-Beside our main responsibilities, everyone had time to help the other one out if there occured any problems. For me that was kind of a good feeling, I think that this is just the way a project like this should be handled. Fast decision making, flexible and after all, a high quality. And basically, the initial work packages has changed, so everyone has done everything in a certain manner.
+Besides our main responsibilities, everyone had time to help the other one out if there occured any problems. For me that was kind of a good feeling, I think that this is just the way a project like this should be handled. Fast decision making, flexible and after all, a high quality. And basically, the initial work packages has changed, so everyone has done everything in a certain manner.
 
-My main responsibilty was Kodi. I tried different approaches (see [(Protocol - Kodi)](../../Protocol/Protocol.md#kodi), what costs me a lot of time to find the right solution for this. After all, we can Pause and Play Kodi remotely. Party mode was on. ;-)
+My main responsibilty was Kodi. I tried different approaches (see [Protocol - Kodi](../../Protocol/Protocol.md#kodi), what costs me a lot of time to find the right solution for this. After all, we can Pause and Play Kodi remotely. Party mode was on. ;-)
 
 One of the main issues of the team was Snowboy. We wanted to set up voice commands with that, but there always occured some strange errors. We tried on different platforms (Mac, Windows, PI), but no luck for us, what was quite frustrating for us. Due to the lack of documentation, we had no idea how to face that issue. Because Bernhard had voice commands as the main responsibility, he tried to find another solution and found a working one (Adafruit with IFTTT). 
 
-After the two days, nearly everything worked out as exptected. I finalized the presentation to be well prepared for the in class presenation and live demo.
+After the two days, nearly everything worked out as exptected. I finalized the presentation to be well prepared for the in class presentation and live demo.
+
+### Project 3 - presentation and live demo
+Bernhard had some issues with the voice command again, but he finally made it for the presentation. After that all things were set up correctly and the presentation with the live demo worked out very well.
+
+Some notes about the other group presentations:
+* ENI
+   * Cool timing idea, going through the whole day in fast motion
+   * Nice DYI smart water boiler
+   * Good presentation
+   
+* ENI (Internationals)
+   * Why no live demo?!
+   * Lot of things they played around with and tried out
+   * Not that related to their use cases
+
+### Course reflection
+Afer all, the course was quite different than the other ones in that degree program. We had do a lot of practical work, and on our one. I liked that very much because I think with the practical work and the hands on experience, you can learn more than just sitting in front of the video projector. 
+Personally I would have liked to hear more about what happens behind the scenes, e.g. when we do some commands on the WEMOS, how to set something up (from the beginning), why using this technology and not this, etc. We worked an an rather high level of abstraction.
+Another thing is that I do not really like the Matrix chat. Moodle also provides all the neccessary stuff for managing a course (discussion forum, deadlines) etc. This would be helpful because with Matrix I (and all the other MC-guys) often missed some chat details and/or deadlines. In moodle, we have a look at it every day.
