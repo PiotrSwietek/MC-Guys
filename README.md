@@ -17,3 +17,4 @@ To provide our own view of the lecture, you can find our portfolios here:
 Project files can be found here:
 * Project 1: Discussion round, no documents
 * [Project 2](Projects/project2): Automate your friends home 
+* [Project 3](Projects/project3): Final project
