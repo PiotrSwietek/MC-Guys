@@ -210,3 +210,21 @@ After some issues last session, I worked on the Kodi setup with the MQTT plugin.
 HUE [(Protocol)](../../Protocol/Protocol.md#philips-hue-lamps)
 
 After setting up Kodi, I helped Piotr with the Hue lamps. Now the new setup works very well, but the node-Red flow was tricky that time. Because we want to control all the possible hue stuff stuff, the configuration becomes quite complex (see protocol), but we finally made it. And after all, for me it was quite funny to play around with them.
+
+### Project 3 - in class
+Because of the reschedule of the our time table, I was not able to attend to this lesson. I informed both my team mates and the professor. Glad that for both of them it was not a problem at all.
+
+### Project 3 - meetings
+[(Project 3)](../../Projects/project3)
+
+Goal of the project was to implement some usage scenarios from our project 2 when we automated our friends home. Because our usage scenario was already very well set up, we just splitted it into different sections. 
+
+We met for two days to build the final project. Because we wanted to use stuff we already did in the lecture, finding the right work packages was quite easy for us: everyone does what he has already done (see [(Work packages)](../../Projects/project3/work-packages.png). This decision speed up our implementation a lot.
+
+Beside our main responsibilities, everyone had time to help the other one out if there occured any problems. For me that was kind of a good feeling, I think that this is just the way a project like this should be handled. Fast decision making, flexible and after all, a high quality. And basically, the initial work packages has changed, so everyone has done everything in a certain manner.
+
+My main responsibilty was Kodi. I tried different approaches (see [(Protocol - Kodi)](../../Protocol/Protocol.md#kodi), what costs me a lot of time to find the right solution for this. After all, we can Pause and Play Kodi remotely. Party mode was on. ;-)
+
+One of the main issues of the team was Snowboy. We wanted to set up voice commands with that, but there always occured some strange errors. We tried on different platforms (Mac, Windows, PI), but no luck for us, what was quite frustrating for us. Due to the lack of documentation, we had no idea how to face that issue. Because Bernhard had voice commands as the main responsibility, he tried to find another solution and found a working one (Adafruit with IFTTT). 
+
+After the two days, nearly everything worked out as exptected. I finalized the presentation to be well prepared for the in class presenation and live demo.
