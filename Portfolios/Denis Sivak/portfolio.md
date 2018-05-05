@@ -119,20 +119,25 @@ so I thought it would be kind of important to take this class.
 	* Security
 	
 ## Summary of practical stuff done
-[(Link to protocol)](../../Protocol/Protocol.md#ulnoiot-hello-world)
+[(Link to protocol / wemos setup)](../../Protocol/Protocol.md#ulnoiot-hello-world)
+[(Link to protocol / doorlock)](../../Protocol/Protocol.md#relay)
+
 	* Setting up a second Wemos D1 mini node
 	* Configuring button and LED as devices
 	* Using mqtt to add an action for the button press
 	* The LED can now be controlled remotely using the button
 	* Setting up Node RED to toggle the led using a button
-	* Implemented doorlock to open with GUI buttons using Node RED [(Link to protocol)](../../Protocol/Protocol.md#relay)
+	* Implemented doorlock to open with GUI buttons using Node RED 
 
 
 # Lecture 3 (23.03.2018)
 
 ## Summary of practical stuff done
-	* Setting up the door lock using an RFID card reader [(Link to protocol)](../../Protocol/Protocol.md#Control-servo/lock-via-a-RFID-reader)
-	* Setting up a temperature and humidity sensor [(Link to protocol)](../../Protocol/Protocol.md#Showing-temp/humidity-on-LCD-display)
+[(Link to protocol / rfid reader)](../../Protocol/Protocol.md#Control-servo/lock-via-a-RFID-reader)
+ [(Link to protocol / dht22 & display)](../../Protocol/Protocol.md#Showing-temp/humidity-on-LCD-display)
+
+	* Setting up the door lock using an RFID card reader 
+	* Setting up a temperature and humidity sensor
 	* Connecting the LCD display 
 	* Display of sensor data (temperature and humidity) on the LCD
 	
@@ -215,6 +220,7 @@ Personally I found that the tutorial was very simple but it showed the basic usa
 
 ## MQTT Simulator
 [(Link to protocol)](../../Protocol/Protocol.md#Showing-temp/mqtt-simulator)
+
 For this task we used node RED. Therefore, a button was added to the UI which sends a message to the mqtt broker on the PI. When the PI receives the message, the signal
 is forwarded to the PC, which then plays an audio file.
 
