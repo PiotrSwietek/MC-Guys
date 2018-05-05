@@ -272,7 +272,7 @@ chosen: SPI, I2C, zigbee
 
 # KNX Course
 
-In this class whe had to go through the KNX course and do the test to get the KNX certificate.
+In this class whe had to go through the KNX course and do the test to get the [KNX certificate](https://github.com/PiotrSwietek/MC-Guys/blob/master/Portfolios/Piotr%20Swietek/knxcertification.pdf).
 
 # Phillips Hue
 
