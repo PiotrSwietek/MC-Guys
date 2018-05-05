@@ -146,7 +146,15 @@ In order to connect an ethernet device (like hue lamps) and connect to a local n
 * ![alt text](images/hue-gui.PNG "Hue node-Red UI")
 * ![alt text](images/hue_lamp.JPG "Hue lamp")
 
+## Distance sensor/Motion Detector
 
+Goal is to implement a Motion Detector with the ultrasonic distance sensor
+
+* First create a new Node for the distance sensor
+* connect the sensor correctly: d2 = trigger, d1 = echo
+* In the node Terminal create new device: d("hcsr04", "distance", d2, d1, precision=10
+* now the sensor broadcasts on the created topic
+* use NodeRed to listen on the MQTT topic and create a function that sets an alarm when a specific threshold is crossed (we defined thershold<300 for testing)
 
 ## Kodi
 > Kodi (formerly XBMC) is a free and open-source media player software application developed by the XBMC Foundation - Wikipedia
