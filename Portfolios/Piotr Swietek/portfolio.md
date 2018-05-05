@@ -168,7 +168,7 @@ Comparison smart home - normal human -> more happy, more comfortable
 happyness through convenience
 easy to install
 easy to upgrade
-=======================================================================
+______________________________________________________
 Home automation is growing, a lot of customization
 market is becoming more open and accessible
 other devices have cameras too but not much security breaches there
@@ -190,7 +190,7 @@ Change password dont use default settings
 ### Phase 1  
 hacked locks/camera, less security against thieves
 loss of privacy
-======================================================================
+______________________________________________________
 too complex for older people
 costs are high
 experts are very expensive for installing home-automation systems
@@ -280,7 +280,7 @@ Setting up nodered to control the HUE Lamp was quite easy. In the end I could co
 
 Out of all exercises I liked this the most. It was really fascinating seeing the lamp go on when you press a button in the web UI. I also liked it because it was like automating your own lighting in the real world. The lamps may be expensive but I think they are worth it.
 
-# Distance snesor/Motion Detector
+# Distance sensor/Motion Detector
 
 The task was to set up a distance sencor to function like a motion sensor.
 
