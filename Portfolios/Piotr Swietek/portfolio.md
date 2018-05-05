@@ -77,11 +77,11 @@ In this exercise I learned how to set up a raspberry pi with a flashed SD card a
 
 # IoT domains
 
-Healthcare - Monitor hand hygiene compliance through IOT device and sensors to reduce transmission of Hospital Acquired Infections to patients.
-Transport and logistics - Monitoring the logistics vehicles health to send alerts.
-Retail - Remote interaction with products increase personalized shopping experience.
-Insurance - Tracking clients' activity and offer discounts or rewards for healthy and safe behavior.
-Farming - Tracking soil health and climate.
+Healthcare - Monitor hand hygiene compliance through IOT device and sensors to reduce transmission of Hospital Acquired Infections to patients.  
+Transport and logistics - Monitoring the logistics vehicles health to send alerts.  
+Retail - Remote interaction with products increase personalized shopping experience.  
+Insurance - Tracking clients' activity and offer discounts or rewards for healthy and safe behavior.  
+Farming - Tracking soil health and climate.  
 
 ## Devices:
 * smart locks
