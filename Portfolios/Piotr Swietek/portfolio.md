@@ -160,6 +160,7 @@ I had problems installing Homeassistant on my Windows PC. The Installation guide
 to execute the commands stated in the guide but it took more than a hour to execute this command so I interrupted it.
 
 # Debate
+I was in the Contra team but I was in the audience so I took notes:
 
 ## PRO
 ### Phase 1  
@@ -293,3 +294,57 @@ I lost almos 2 hours setting up the distance sensor becaus it just would not wor
 When I set the sensor up I could get the measured distance through MQTT. I wrote a function to detect movement in NodeRed.
 
 I think that the distance sensor is not a reliable motion detector but it could kind of work indoors I guess. Sadly we had no real motion detectors available.
+
+# [Project 2](https://github.com/PiotrSwietek/MC-Guys/tree/master/Projects/project2)
+The project was about automating a friends house. We have written a [scenario](https://github.com/PiotrSwietek/MC-Guys/blob/master/Projects/project2/Automate-your-friends-home_scenario.pdf) for the family which lives in the house we want to automate.
+
+Our team nearly missed the deadline but in the end we managed to deliver a good plan and list of parts we needed.
+We also got a lot of praise on our scenario which was quite surprising to me because we did not really put a lot of effort into it.
+
+Thankfully the presentaion went smoothly and with no problems.
+
+Some notes and questions from the other presentations:
+
+Internationals
+
+* Rich luxurious people who want the best. (paul and rachel)
+* Some crazy ideas like outfit system in the walk-in closet
+* very detailed workload plan 
+
+Different devices from different manufacturers? Is it all possible to connect? Is it a lot of work?
+
+ENI
+
+* A smart and wealthy but paranoid guy
+* Has a dog (but sadly only mentioned in scenario)
+* Presentation itself very technical and almost too long
+
+Why did you choose loxone? Is it possible to mix loxone parts with other?
+
+# [Project 3](https://github.com/PiotrSwietek/MC-Guys/tree/master/Projects/project3)
+
+Project 3 was about defining some scenarios and implementing them ourselves.
+
+We used our written scenario from Project 2 and picked out some more interesting ones to recreate.
+
+I was responsible for the HUE Lamps and the whole security apsect (motion detector/lock/rfid/alarm sound).
+
+The presentation was a bit wonky because we have built everything live and one member of our team connected the nodes as the presentation went on. For a live presentation it went really well actually.
+
+Notes on other presentation:
+
+ENI:
+* cool selfmade water boilder
+* good presentation 
+
+Internationals:
+* unfortunatly no live demos but videos were nice too
+* a bit disconnected from their actual scenario
+
+# Reflection
+
+All in all the course was very different from the other courses. Most of the classes we spent tinkering around with devices which was really nice. I also liked the amount of sensors and devices we had at our disposal. We did not really learn a lot whats going on behind the scene though. We kind of just used some commands from the UlnoIOT framework (which I dont know what it is exactly) and used some high level MQTT commands and eveything worked. I wish we would get a little background information what UlnoIOT really is, what is it architecture and so on. I did not like the fact that we used the Matrix chat and that the course utilities were not on the standard moodle elearning platform the students are used to. It was sometimes really confusing when some informations regarding the project deadlines or content were changed from the slides and only mentioned in the matrix chat. I was not online in the chat everyday and it happened that I overlooked some vital informations which was frustrating.
+
+In summary I liked the course a lot. We learned a lot of useful things and the course gave me a kickstart in the homebuilding field, which was my hope for this course.
+
+
