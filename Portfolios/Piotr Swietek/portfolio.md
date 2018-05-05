@@ -126,7 +126,7 @@ I had some trouble setting it all up but in retrospective it isnt hard at all.
 
 # Smart Lock
 
-Task was to control a magnetic lock through a graphical UI in the web using NodeRed. [Protocol] (https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#control-servolock-vai-a-rfid-reader)
+Task was to control a magnetic lock through a graphical UI in the web using NodeRed. [Protocol](https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#control-servolock-vai-a-rfid-reader)
 
 The lock would be steered through a relay(electrical switch). I connected one connector of the lock to the power supply and the other to the relay.
 The relay was connected to the powersupply of the lock and the lock itself. Now I have to define a new device for the output port:
