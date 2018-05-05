@@ -162,7 +162,7 @@ to execute the commands stated in the guide but it took more than a hour to exec
 # Debate
 
 ## PRO
-### Phase 1
+### Phase 1  
 automated home examples, smart light, smart heating, energy consumption.
 Comparison smart home - normal human -> more happy, more comfortable
 happyness through convenience
@@ -187,7 +187,7 @@ Change password dont use default settings
 
 
 ## CON
-### Phase 1
+### Phase 1  
 hacked locks/camera, less security against thieves
 loss of privacy
 ======================================================================
@@ -269,3 +269,23 @@ standard for industrail electronic deviceseasy to deploy
 master/slave with unique adresses
 
 chosen: SPI, I2C, zigbee
+
+# Phillips Hue
+
+In this exercise we had to set up a Phillips Hue Lamp and controll it through MQTT commands or NodeRED.
+
+I had a lot of trouble setting up the Phillips bridge but after some time we managed to get it working. The Problem was that the bridge hat no internet access. I figured out how to set it up correctly: I had to connect everything before the pi did bootup and then it worked.
+
+Setting up nodered to control the HUE Lamp was quite easy. In the end I could controll the brightness and Color of the lamp and I could turn it off remotely.
+
+Out of all exercises I liked this the most. It was really fascinating seeing the lamp go on when you press a button in the web UI. I also liked it because it was like automating your own lighting in the real world. The lamps may be expensive but I think they are worth it.
+
+# Distance snesor/Motion Detector
+
+The task was to set up a distance sencor to function like a motion sensor.
+
+I lost almos 2 hours setting up the distance sensor becaus it just would not work... Then I realised that the sensor was defect and my approach worked with another sensor perfectly. This has upset me alot because I did everything correctly but the sensor wouldn work.
+
+When I set the sensor up I could get the measured distance through MQTT. I wrote a function to detect movement in NodeRed.
+
+I think that the distance sensor is not a reliable motion detector but it could kind of work indoors I guess. Sadly we had no real motion detectors available.
