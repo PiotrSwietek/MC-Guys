@@ -108,6 +108,11 @@ so I thought it would be kind of important to take this class.
 	* One problem we had was that we didn't knew how to get the actual value of the button
 	* Also defining the mqtt action was problematic as we did not understand all the parameters
 	
+## Lecture reflection
+This lecture I learned what the terms IoT and H&B-Automation denote. It was also very interesting for me to work with a Raspberry PI because I have never done that before and
+I really looked forward to it.
+I really liked how ulno-iot is implemented and how easy it is to configure a node.
+
 # Lecture 2 (22.03.2018)
 
 ### What does the term entail?
@@ -128,7 +133,10 @@ so I thought it would be kind of important to take this class.
 	* The LED can now be controlled remotely using the button
 	* Setting up Node RED to toggle the led using a button
 	* Implemented doorlock to open with GUI buttons using Node RED 
-
+	
+## Lecture reflection
+This lecture I learned how to use different devices with the Wemos D1 mini nodes. I was surprised how easy it actually is to setup everything with ulno-iot but I would also like
+to get a bit more insight on how it really works and what happens in the background.
 
 # Lecture 3 (23.03.2018)
 
@@ -143,6 +151,10 @@ so I thought it would be kind of important to take this class.
 	
 ## Problems during the practical stuff
 	* Connecting and setting up the servo was quite confusing 
+	
+## Lecture reflection
+This lecture we had some problems using the servo because there are different parameters/angles to configure which are not very well documented. We had to ask the professor for help because
+we did not understand what all those angles actually mean/do.
 
 # Lecture 4 (03.04.2018)
 
@@ -210,7 +222,12 @@ so I thought it would be kind of important to take this class.
 	
 ## OpenHAB
 We tried to get OpenHAB running. Unfortunately, we had some problems on our machines which cost too much time, so we didn't finish the OpenHAB stuff in time.
-	
+
+## Lecture reflection
+What I hated in this lecture was that I had to argue against H&B automation in the discussion round. It's really hard to make something look bad if you actually don't think so. 
+Sometimes I felt kinda stupid because I had to come up with arguments that don't really make sense just to satisfy the discussion.
+Overall I think it was quite fun for everybody to see different viewpoints on the topic and how everything has it's pros and cons.
+
 # Lecture 5 (10.04.2018)
 
 ## KNX eCampus
@@ -223,6 +240,10 @@ Personally I found that the tutorial was very simple but it showed the basic usa
 
 For this task we used node RED. Therefore, a button was added to the UI which sends a message to the mqtt broker on the PI. When the PI receives the message, the signal
 is forwarded to the PC, which then plays an audio file.
+
+## Lecture reflection
+This lecture I really did not like the KNX eCampus because I think that I haven't learned anything from it I can use in the future. If I'm going to use KNX one day, I will for sure have to 
+do the tutorial again and get more information. Doing an online tutorial for something you cannot actually use wasn't that fun.
 
 # Project 2
 For this project we had to plan the automation of our friends home. I was responsible for the climate & heating part. I decided to use only HomeMatic devices because the
