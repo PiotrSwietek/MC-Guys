@@ -133,8 +133,8 @@ so I thought it would be kind of important to take this class.
 # Lecture 3 (23.03.2018)
 
 ## Summary of practical stuff done
-[(Link to protocol / rfid reader)](../../Protocol/Protocol.md#Control-servo/lock-via-a-RFID-reader)
- [(Link to protocol / dht22 & display)](../../Protocol/Protocol.md#Showing-temp/humidity-on-LCD-display)
+[(Link to protocol / rfid reader)](../../Protocol/Protocol.md#Control-servo)
+ [(Link to protocol / dht22 & display)](../../Protocol/Protocol.md#Showing-temp)
 
 	* Setting up the door lock using an RFID card reader 
 	* Setting up a temperature and humidity sensor
@@ -219,7 +219,7 @@ simulations and quizzes which had to be completed. After completing all of the t
 Personally I found that the tutorial was very simple but it showed the basic usage and setup of the software with the devices which could be useful in the future.
 
 ## MQTT Simulator
-[(Link to protocol)](../../Protocol/Protocol.md#Showing-temp/mqtt-simulator)
+[(Link to protocol)](../../Protocol/Protocol.md#mqtt-simulator)
 
 For this task we used node RED. Therefore, a button was added to the UI which sends a message to the mqtt broker on the PI. When the PI receives the message, the signal
 is forwarded to the PC, which then plays an audio file.
