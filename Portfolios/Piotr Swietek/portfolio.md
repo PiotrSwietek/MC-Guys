@@ -286,7 +286,7 @@ Out of all exercises I liked this the most. It was really fascinating seeing the
 
 # Distance sensor/Motion Detector
 
-The task was to set up a distance sencor to function like a motion sensor.
+The task was to set up a distance sencor to function like a motion sensor. [Protocol](https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#distance-sensormotion-detector)
 
 I lost almos 2 hours setting up the distance sensor becaus it just would not work... Then I realised that the sensor was defect and my approach worked with another sensor perfectly. This has upset me alot because I did everything correctly but the sensor wouldn work.
 
