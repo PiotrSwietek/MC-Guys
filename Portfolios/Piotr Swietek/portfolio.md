@@ -65,7 +65,7 @@ I am probably more the programming type in a group. I can realize the ideas of o
 
 I downloaded the image from ulnoiot and made sure that the checksum is the same as stated on the source site.
 Then I flashed the SD card with it using Etcher.
-//Link protocol
+[Protocol](https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#raspberry)
 
 When entering the SD I thought the Pi is broken because I did not felt the spring when I inserted the card but the proffessor told us this Pi has no spring installed so all was fine.
 
@@ -92,7 +92,7 @@ Farming - Tracking soil health and climate.
 # Node onboard_blinker
 
 I set up an LED which can be controlled with MQTT through an internet connection.
-//Link protocol
+[Protocol](https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#iot-nodes)
 
 At first I was a bit overwhelmed but after spending some time reading the ulnoiot documentation things got clearer and I could complete this exercise.
 
@@ -113,7 +113,7 @@ in my own home. This would not be too much work either which is impressive.
 # MQTT - NodeRed
 
 Task was to steer the blinker through a button. But both were on seperate devices only communicating through the WiFi.
-I followed the solution of Bernhard Hiesl & Denis Sivak //Link here
+I followed the solution of Bernhard Hiesl & Denis Sivak [Protocol](https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#ulnoiot-hello-world)
 
 The MQTT commands caused us trouble because I forgot that I had to use them on the pi and not in the device console.
 Also I forgot to execute the run() command so all the MQTT set requests would not be executed.
@@ -126,7 +126,7 @@ I had some trouble setting it all up but in retrospective it isnt hard at all.
 
 # Smart Lock
 
-Task was to control a magnetic lock through a graphical UI in the web using NodeRed.
+Task was to control a magnetic lock through a graphical UI in the web using NodeRed. [Protocol] (https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#control-servolock-vai-a-rfid-reader)
 
 The lock would be steered through a relay(electrical switch). I connected one connector of the lock to the power supply and the other to the relay.
 The relay was connected to the powersupply of the lock and the lock itself. Now I have to define a new device for the output port:
@@ -139,7 +139,7 @@ It even started to smell burned so I disabled the power of it. I tried to connec
 
 # Temperature and Humidity + LCD
 
-Task was to set up a temperature and humidity sensor which is connected to the LCD display. The LCD should show the temperature and humidity in real time.
+Task was to set up a temperature and humidity sensor which is connected to the LCD display. The LCD should show the temperature and humidity in real time. [Protocol](https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#showing-temphumidity-on-lcd-display)
 
 The temperature setup was no problem at all. Because it was the same procedure with all other nodes. The LCD on the other hand did create some problems.
 First I connected the LCD wrong with the controller so I did not work at all. But after reading the documentation it worked properly.
@@ -270,9 +270,13 @@ master/slave with unique adresses
 
 chosen: SPI, I2C, zigbee
 
+# KNX Course
+
+In this class whe had to go through the KNX course and do the test to get the KNX certificate.
+
 # Phillips Hue
 
-In this exercise we had to set up a Phillips Hue Lamp and controll it through MQTT commands or NodeRED.
+In this exercise we had to set up a Phillips Hue Lamp and controll it through MQTT commands or NodeRED. [Protocol](https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#philips-hue-lamps)
 
 I had a lot of trouble setting up the Phillips bridge but after some time we managed to get it working. The Problem was that the bridge hat no internet access. I figured out how to set it up correctly: I had to connect everything before the pi did bootup and then it worked.
 
