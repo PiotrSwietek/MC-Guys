@@ -1,4 +1,4 @@
-# Lecture 1
+# Lecture 1 (19.03.2018)
 
 ## Introduction
 
@@ -96,6 +96,8 @@ so I thought it would be kind of important to take this class.
 	* Amazon Echo
 	
 ## Summary of practical stuff done
+[(Link to protocol)](../../Protocol/Protocol.md#ulnoiot-environment-setup)
+
 	* Setup Raspberry Pi with the UlnoIoT image
 	* Initialized and setup Wemos D1 mini
 	* Controlling onboard-LED of the Wemos using the Raspberry Pi
@@ -106,7 +108,7 @@ so I thought it would be kind of important to take this class.
 	* One problem we had was that we didn't knew how to get the actual value of the button
 	* Also defining the mqtt action was problematic as we did not understand all the parameters
 	
-# Lecture 2
+# Lecture 2 (22.03.2018)
 
 ### What does the term entail?
 	* Remote control of building environment
@@ -117,28 +119,27 @@ so I thought it would be kind of important to take this class.
 	* Security
 	
 ## Summary of practical stuff done
+[(Link to protocol)](../../Protocol/Protocol.md#ulnoiot-hello-world)
 	* Setting up a second Wemos D1 mini node
 	* Configuring button and LED as devices
 	* Using mqtt to add an action for the button press
 	* The LED can now be controlled remotely using the button
 	* Setting up Node RED to toggle the led using a button
-	* Implemented doorlock to open with GUI buttons using Node RED
-	
-## Problems during the practical stuff
-	* 
+	* Implemented doorlock to open with GUI buttons using Node RED [(Link to protocol)](../../Protocol/Protocol.md#relay)
 
-# Lecture 3
+
+# Lecture 3 (23.03.2018)
 
 ## Summary of practical stuff done
-	* Setting up the door lock using an RFID card reader
-	* Setting up a temperature and humidity sensor
+	* Setting up the door lock using an RFID card reader [(Link to protocol)](../../Protocol/Protocol.md#Control-servo/lock-via-a-RFID-reader)
+	* Setting up a temperature and humidity sensor [(Link to protocol)](../../Protocol/Protocol.md#Showing-temp/humidity-on-LCD-display)
 	* Connecting the LCD display 
 	* Display of sensor data (temperature and humidity) on the LCD
 	
 ## Problems during the practical stuff
 	* Connecting and setting up the servo was quite confusing 
 
-# Lecture 4
+# Lecture 4 (03.04.2018)
 
 ## H&B Discussion: 
 	* Should everybody use home & building automation?
@@ -205,7 +206,7 @@ so I thought it would be kind of important to take this class.
 ## OpenHAB
 We tried to get OpenHAB running. Unfortunately, we had some problems on our machines which cost too much time, so we didn't finish the OpenHAB stuff in time.
 	
-# Lecture 5
+# Lecture 5 (10.04.2018)
 
 ## KNX eCampus
 In the beginning of the lecture, we started the KNX eCampus which is basically a set of tutorials for the use of the KNX bus/protocol. The tutorials also include
@@ -213,7 +214,28 @@ simulations and quizzes which had to be completed. After completing all of the t
 Personally I found that the tutorial was very simple but it showed the basic usage and setup of the software with the devices which could be useful in the future.
 
 ## MQTT Simulator
+[(Link to protocol)](../../Protocol/Protocol.md#Showing-temp/mqtt-simulator)
 For this task we used node RED. Therefore, a button was added to the UI which sends a message to the mqtt broker on the PI. When the PI receives the message, the signal
 is forwarded to the PC, which then plays an audio file.
 
-## 
+# Project 2
+For this project we had to plan the automation of our friends home. I was responsible for the climate & heating part. I decided to use only HomeMatic devices because the
+structure of their homepage was more appealing to me than the ones from other manufacturers. The needed components could be found easily and well-described on their homepage.
+What I also liked is that it was able to filter for different applications (lights, heating, entertainment) which made it quite easy to plan accordingly.
+
+In this project I learned how easy it can be to automate your home if you have money. The sophisticated and well-planed solutions that were presented by the teams were very expensive
+(<50000 €) but they also seemed easy to integrate and well designed. The cheaper and DIY solutions didn't seem to be as manageable.
+
+# Project 3
+For this project we had to a prototype system for a defined automation scenario. My role in the team was the configuration of all nodes and some interactions on Node-RED. 
+
+This project showed me that integrating many nodes can be problematic and harder to manage. Also we had some problems with the voice control in the beginning but in the end
+we managed to get it working. The live-presentation also worked out well.
+
+# Course reflection
+I really liked the way it was taught. We did much practical stuff and learned many things by doing. Also we could always ask for help if we had some problems to get a more detailed explanation
+on the topic. 
+The thing I hated the most about the course is that we did not use the Moodle platform. Basically every course at the FH is managed via the Moodle system and all students are used to it. It is quite
+confusing if one course is managed via different platforms. Providing all the necessary material and information via Moodle would have been so much more convenient for the students.
+All in all I enjoyed the lessons and the information provided. I now understand how such systems work and how the nodes interact with each other. Also the second project was probably the thing
+I liked the most about this course because I got insight on how you would plan and realize such systems in real life. 
