@@ -111,7 +111,7 @@ First of all we flashed the prepared image on the raspberry pi. After the flashi
 The second part of the lecture we went through the given tutorial with the topic IoT Node. Here we had to flash also a prepared image on the Wemos D1 Mini. After this process we were able to disconnect it from the pi, connect it again to another usb port and reconnect again via the pi by go into the node folder and execute the console command.
 
 ### Recap
-*TODO*
+For the first time it was very easy to understand what we are doing. Even if I've never done this node flashing before I knew what it should do and how it connects to the network of the broker.
 
 ## 22.3.2018
 
@@ -125,7 +125,7 @@ Due to the speed of Denis and me we've allready finished the relay and lock task
 The next task was to confiugre a simple lock/unlock button with Noder RED. If you click this butten the lock should be locked/unlocked. So Node RED provides us a UI. Node-Red just sends an MQTT message to the broker (Pi) which triggers the relay/lock.
 
 ### Recap
-*TODO*
+The hardest part in this lecture was the understanding of the mqtt stuff. How the nodes communicate with the broker and how to control them with the help of mqtt messages. After the knowledge of the mqtt things it was easy to setup the relay node. The Node-Red assignment was quite easy.
 
 ## 23.3.2018
 
@@ -149,7 +149,7 @@ The next task was to confiugre a simple lock/unlock button with Noder RED. If yo
 * Configured the MQTT actions via Node-Red to foreward the data
 
 ### Recap
-*TODO*
+The first exercise was quite simple, because the only thing we had to do is taking the node and logic of the last lock exercise and just check if the mqtt message sends the right RFID code. The LCD display was also not that hard to understand.
 
 ## 3.4.2018
 ### OpenHAB
@@ -198,7 +198,7 @@ Management Bus (PMBus), Intelligent Platform Management Interface (IPMI), Displa
 * Zegbee
 
 ### Recap
-*TODO*
+Beside that the roles in the debate were defined, it was clearly understandable what every group wanted to say. The opinions of every person was firm and well played, even if someone was normally for or against home automation. The second task of the lecture was a little bit unnecessary in my opinion. I didn't liked this bus stuff.
 
 ## 10.4.2018
 
@@ -208,10 +208,10 @@ Management Bus (PMBus), Intelligent Platform Management Interface (IPMI), Displa
  After the completion of several questions and tasks I got an KNX certificate which could be found in my folder.
 
 ### MQTT Simulator
-*TODO*
+This task was also very little effort. I had to install node red on my own pc and just implement a node red flow. The reason of this was, that the MQTT broker (Raspberry Pi) sends a MQTT action which was executed by my PC due to limitations on the Pi. For example audio output or something like that.
 
 ### IFTTT and Adafruit
-*TODO*
+This was the most interessting task I've done in this course. The IFTTT platform gives you the opportunity to trigger events in other applications. I really like the idea of, if you do this than do that. The Adafruit extension was responsible for the MQTT message to the broker. The idea of this was, that if you say "Do something" to the Google Assistent it triggers a event and sends a message to adafruit, which again triggers a MQTT flow inside node red and does something.  
 
 ### Philips Hue
 The Philips Hue stuff was done by [Piotr](Portfolios/Piotr%20Swietek/portfolio.md), but I always checked the newest changes, because I was interested in the topic.
@@ -220,7 +220,7 @@ The Philips Hue stuff was done by [Piotr](Portfolios/Piotr%20Swietek/portfolio.m
 [Oliver](Portfolios/Oliver%20Barth/portfolio.md) was responsible for the Kodi part. This was not very interesting for me, because I've allready done this at home.
 
 ### Recap
-*TODO*
+Except the KNX stuff the lecture was quite intressting and I had real fun implementing and learning this MQTT, IFTTT and HUE things.
 
 ## 17.4.2018
 
@@ -287,8 +287,22 @@ In the last lecture I did the task with the led strip. Following steps will be n
 
 The cool thing about this led rgb_multi led strip is, that you can easily access every single led and independently change colors of it.
 
-### Recap
-*TODO*
+## 26.4.2018
+
+### Project Setup
+[Denis](https://github.com/PiotrSwietek/MC-Guys/blob/master/Portfolios/Denis%20Sivak/portfolio.md), [Manuel](https://github.com/PiotrSwietek/MC-Guys/blob/master/Portfolios/Manuel%20M%C3%BChlschuster/portfolio.md) and I did nearly the whole node stuff. We flashed following nodes:
+* Servo (Shutter, Windows,...)
+* Button
+* Multi RGB
+* Lock
+* Humiture Sensor
+
+Another work package for me was the Node Red flows. I created some flows and also fixed and tweaked some errors of the other flows.
+
+Last but not least I was responsible for the voice control via the Google Assistent, IFTTT and Adafruit. We triggered an mqtt message by saying "Movie mode". So the IFTTT application sends the data to Adafruit and the MQTT broker listens via Node Red on the Adafruit changes/events.
+
+### Project Recap
+I found it really really really intressting to see how a automated home or day could look like. The idea with the fully day scenarios is a really good idea to implement the system. It is easier to understand why we are doing this and what for we are doing this.
 
 ## Problems & Lessons Learned
 ### SSH
@@ -306,20 +320,6 @@ We didn't know how to configure the servo right. After the hint that we should u
 ### Snowboy
 Nearly nothing was installed on the pi to use Snowboy instantly. look at the section Snowboy to see the command history.
 
-## 26.4.2018
-
-### Project Setup
-[Denis](https://github.com/PiotrSwietek/MC-Guys/blob/master/Portfolios/Denis%20Sivak/portfolio.md), [Manuel](https://github.com/PiotrSwietek/MC-Guys/blob/master/Portfolios/Manuel%20M%C3%BChlschuster/portfolio.md) and I did nearly the whole node stuff. We flashed following nodes:
-* Servo (Shutter, Windows,...)
-* Button
-* Multi RGB
-* Lock
-* Humiture Sensor
-
-Another work package for me was the Node Red flows. I created some flows and also fixed and tweaked some errors of the other flows.
-
-Last but not least I wos responsible for the voice control via the Google Assistent, IFTTT and Adafruit. We triggered an mqtt message by saying "Movie mode". So the IFTTT application sends the data to Adafruit and the MQTT broker listens via Node Red on the Adafruit changes/events.
-
-### Project
 
 # Fully Recap
+I really liked the style of the lectures and things get taught. It is more or less learning by doing with teamwork. Another good thing was the helpfullness of your side. If we had any struggle with our task you helped us as fast as you could. But what i didn't liked so far was that the course was not managed by Moodle. After the Bachelor we allready got used to it and now everything changed. It was hard to observe deadlines. But all in all I can say i understand home automation and I am able to implement some real cool stuff in this domain.
