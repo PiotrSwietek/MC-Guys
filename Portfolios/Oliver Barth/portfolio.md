@@ -106,7 +106,7 @@ One of the hardest steps was actually getting the commands right to register a d
 
 Goal is to set up a "Hello World program" in the sense of home automation: Triggering a button of one node turns a LED on/off on the other node.
 
-Setting up the nodes was quite easy because we already knew the commands needed. The big question was, how to set up the connection to forward the button signal to the other node. With the help of our team-mates, we finally figured that out. Understanding the architecture behind our setup (Pi is our MQTT-broker as well) and what that means was not that clear for the others, because they were completley unfamiliar with the MQTT-protocol. Fixing it with the short intro from our professor inbetween made that more clear for us all.
+Setting up the nodes was quite easy because we already knew the commands needed. The big question was, how to set up the connection to forward the button signal to the other node. With the help of our team-mates, we finally figured that out. Understanding the architecture behind our setup (Pi is our MQTT-broker as well) and what that means was not that clear for the others and myself, because we were fairly unfamiliar with the MQTT-protocol. Fixing it with the short intro from our professor inbetween made that more clear for us all.
 
 ### Advanced Hello World
 [(Protocol)](../../Protocol/Protocol.md#relay)
@@ -120,13 +120,13 @@ We only had to set up the relay on our controller and wiring all together. For t
 For that task I was responsible for extending our protocol and wiring up the RFID-reader on our controller. Thanks to the docs from our professor no problems occured.
 Together we set up all devices. The main question was how we can trigger the lock with an RFID-card? We could not simply forward the input from the card to the other node, there must be some logic in between. Because we do not want to code (look for the right console-commands), we used *Node-RED* for that task. 
 
-After getting through some basic tutorials (and I think that was absolutely neccesary to get an idea what is going on) we finally set up a function to filter out the ID of the card to check if it is a valid one and then forwards on or off to the other node. 
+After getting through some basic tutorials (and I think that was absolutely neccesary to get an idea what is going on) I finally set up a function to filter out the ID of the card to check if it is a valid one and then forwards on or off to the other node. 
 
 ### Showing temp/humidity on LCD-display
 [(Protocol)](../../Protocol/Protocol.md#showing-temphumidity-on-lcd-display)
 
 Again I was responsible for extending the protocol. 
-Now that we are getting more and more familiar with *Node-RED*, there was this advanced exercise for us. Setting up devices was quite easy that time, the focus lay on the MQTT-fowarding stuff. We were quite unsure what functions we should use for our problem, because we needed to combine the two sensor values and clearing somehow the display if new messages arrive. After some trial and error approaches and the help of our team-mates, we finally made it.
+Now that we are getting more and more familiar with *Node-RED*, there was this advanced exercise for us. Setting up devices was quite easy that time, the focus lay on the MQTT-fowarding stuff. I was quite unsure what functions we should use for our problem, because we needed to combine the two sensor values and clearing somehow the display if new messages arrive. After some trial and error approaches and the help of our team-mates, we finally made it togehter.
 
 ### Off topic
 [(Protocol)](../../Protocol/Protocol.md)
@@ -135,10 +135,10 @@ Because I found out there is a special formatting sign for code snippets in mark
 
 ### Project 1 - Discussion round
 Goal of this project was to get into an discussion about home and building automation topics.
-First of all we provided a video in our team, where there was a moderator (me), two pro and two con members. After notating three topics and the corresponding pro and con arguments on a whiteboard, the video recording was straightforward altough we all were quite unfamiliar with such discussion groups.
+First of all we provided a video in our team, where there was a moderator (me), two pro and two con members. Because none of the others wanted to be moderator, I volunteered (what saved me from the big discussion round the next session). After notating three topics and the corresponding pro and con arguments on a whiteboard, the video recording was straightforward altough we all were quite unfamiliar with such discussion groups.
 
 The next part was a big discussion round in the lecture. Our team was the con, the other two teams split up into moderator and pro team.
-For this I brain-stormed some con arguments for the topics provided by the moderator team in order to be prepared for the lecture. Because I was the moderator in the video, I was out of discussion for that round, so I gave my notes to Manuel and Denis.
+For this I brain-stormed some con arguments for the topics provided by the moderator team in order to be prepared for the lecture. Because I was the moderator in the video the week before, I was out of discussion for that round, so I gave my notes to Manuel and Denis.
 I was a member of the audience then, below some notes and questions fro my side:
 
 #### General notes per team
@@ -166,7 +166,7 @@ I was a member of the audience then, below some notes and questions fro my side:
 * Lot of different home automation systems, is there a change for a single standard?
 * Alexa starts recording after the keyword? How is the keyword recorded then? (unclearly stated from pro team)
 
-### Protocols
+### Bus-Protocols
 All in all there were about 10 different protocols which we should provide a small presentation on. We split up in groups, Piotr and I were responsible for rs-232, rs-422, rs-485 & DMX. After all the presentations I gained a really good overview about all the different protocols. Perfect teaching method for such things I think.
 
 ### Project 2 - Automate your friends home
@@ -174,5 +174,76 @@ We nearly missed the deadline for writing our scenario about our friends home au
 Next step is to provide a shopping list of devices and gadgets for the home automation system.
 
 ### KNX certificate
+[(Protocol)](../../Protocol/Protocol.md#knx-certificate)
+
 Quite easy, no further issues.
 Certificate can be found [(here)](knxcertification_barth.pdf).
+
+### HUE lamp & Kodi
+HUE [(Protocol)](../../Protocol/Protocol.md#philips-hue-lamps)
+
+Goal was to set up the Philips HUE lamps and control it over the Pi. Because we control the hue-bridge over the ethernet port we have no active internet connection. So the first thing have to set up a Wifi-usb-adapter to bridge the internet connection. That causes some troubles, we do not got some internet connection, that was quite frustrating for me. At least we could control the HUE lamp locally from our computers. Maybe we introduce some disco light next lession. 
+
+Kodi [(Protocol)](../../Protocol/Protocol.md#kodi)
+
+Kodi is an entertainment platform which we also should control over MQTT over node-RED. There is a node-RED plugin available which provides own nodes for the interface and uses RPCs to control Kodi, but there were some connection issues in node-RED, although Kodi was accessable via a web interface. After some trial-and-error approaches, I swapped to a plugin for Kodi itself which listens and sends out MQTT-messages for some basic actions.
+
+### Project 2
+[(Project 2)](../../Projects/project2)
+
+Some notes and questions about the project 2 presentations
+* ENI (Internationals)
+   * Why Amazon Echo? What about Google, etc.?
+   * NFC card vs fingerprint? I would have some security concerns...
+   * Own apps are overkill for your friends house
+
+* ENI
+   * Nice mini server expanples, detailed presentation, but too long presentation
+   * Could be a tech presentation...
+   * Are there only loxone components to integrated? What about Homematic devices, etc.?
+
+### Hue lamp & Kodi continued
+Kodi [(Protocol)](../../Protocol/Protocol.md#kodi)
+
+After some issues last session, I worked on the Kodi setup with the MQTT plugin. I was quite confident that the node-red flow was correct, but it didn't worked either. After double check all the configuration, I restarted the Kodi platform and it finally worked. 90% working on that was a waste of time I guess.
+
+HUE [(Protocol)](../../Protocol/Protocol.md#philips-hue-lamps)
+
+After setting up Kodi, I helped Piotr with the Hue lamps. Now the new setup works very well, but the node-Red flow was tricky that time. Because we want to control all the possible hue stuff stuff, the configuration becomes quite complex (see protocol), but we finally made it. And after all, for me it was quite funny to play around with them.
+
+### Project 3 - in class
+Because of the reschedule of the our time table, I was not able to attend to this lesson. I informed both my team mates and the professor. Glad that for both of them it was not a problem at all.
+
+### Project 3 - meetings
+[(Project 3)](../../Projects/project3)
+
+Goal of the project was to implement some usage scenarios from our project 2 when we automated our friends home. Because our usage scenario was already very well set up, we just splitted it into different sections. 
+
+We met for two days to build the final project. Because we wanted to use stuff we already did in the lecture, finding the right work packages was quite easy for us: everyone does what he has already done (see [Work packages](../../Projects/project3/work-packages.PNG). This decision speed up our implementation a lot.
+
+Besides our main responsibilities, everyone had time to help the other one out if there occured any problems. For me that was kind of a good feeling, I think that this is just the way a project like this should be handled. Fast decision making, flexible and after all, a high quality. And basically, the initial work packages has changed, so everyone has done everything in a certain manner.
+
+My main responsibilty was Kodi. I tried different approaches (see [Protocol - Kodi](../../Protocol/Protocol.md#kodi), what costs me a lot of time to find the right solution for this. After all, we can Pause and Play Kodi remotely. Party mode was on. ;-)
+
+One of the main issues of the team was Snowboy. We wanted to set up voice commands with that, but there always occured some strange errors. We tried on different platforms (Mac, Windows, PI), but no luck for us, what was quite frustrating for us. Due to the lack of documentation, we had no idea how to face that issue. Because Bernhard had voice commands as the main responsibility, he tried to find another solution and found a working one (Adafruit with IFTTT). 
+
+After the two days, nearly everything worked out as exptected. I finalized the presentation to be well prepared for the in class presentation and live demo.
+
+### Project 3 - presentation and live demo
+Bernhard had some issues with the voice command again, but he finally made it for the presentation. After that all things were set up correctly and the presentation with the live demo worked out very well.
+
+Some notes about the other group presentations:
+* ENI
+   * Cool timing idea, going through the whole day in fast motion
+   * Nice DYI smart water boiler
+   * Good presentation
+   
+* ENI (Internationals)
+   * Why no live demo?!
+   * Lot of things they played around with and tried out
+   * Not that related to their use cases
+
+### Course reflection
+Afer all, the course was quite different than the other ones in that degree program. We had do a lot of practical work, and on our one. I liked that very much because I think with the practical work and the hands on experience, you can learn more than just sitting in front of the video projector. 
+Personally I would have liked to hear more about what happens behind the scenes, e.g. when we do some commands on the WEMOS, how to set something up (from the beginning), why using this technology and not this, etc. We worked an an rather high level of abstraction.
+Another thing is that I do not really like the Matrix chat. Moodle also provides all the neccessary stuff for managing a course (discussion forum, deadlines) etc. This would be helpful because with Matrix I (and all the other MC-guys) often missed some chat details and/or deadlines. In moodle, we have a look at it every day.

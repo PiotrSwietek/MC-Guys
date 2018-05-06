@@ -3,6 +3,8 @@
 ## Introduction
 I'm Bernhard I did the bachelor in mobile computing and the reason why i started studying is because i wanted to learn how to develop applications and all the stuff around it.
 
+All tasks were done with the cooperation of [Denis](https://github.com/PiotrSwietek/MC-Guys/blob/master/Portfolios/Denis%20Sivak/portfolio.md).
+
 ### Expectations of class
 I've already heard some stuff about home and building automation, for example making home automation application with an raspberry pi.
 Or kinda google home or something like that. House control application with speech control.
@@ -38,7 +40,6 @@ Nothing here
 
 #### Weirdness/crazyness
 Nothing here
-
 
 ### Siemens
 
@@ -109,33 +110,199 @@ First of all we flashed the prepared image on the raspberry pi. After the flashi
 ### IoT Node
 The second part of the lecture we went through the given tutorial with the topic IoT Node. Here we had to flash also a prepared image on the Wemos D1 Mini. After this process we were able to disconnect it from the pi, connect it again to another usb port and reconnect again via the pi by go into the node folder and execute the console command.
 
+### Recap
+For the first time it was very easy to understand what we are doing. Even if I've never done this node flashing before I knew what it should do and how it connects to the network of the broker.
+
 ## 22.3.2018
 
 ### Configure different nodes
 In the second lecutre our task was to turn on/off a led with a button on another Wemos D1 Mini. To do this, we needed to flash another image on the Mini. On node1 we created a device "LED" and on the node2 we created a "BUTTON". With the run command the Mini publishes his events and with mqtt we configured paths (mqtt_action) so if the button got pressed on node2 the led on node1 gets toggled.
 
-### Node RED
-The next task was to confiugre a simple lock/unlock button with Noder RED. If you click this butten the lock should be locked/unlocked. So Node RED provides us a UI.
+### Relay
+Due to the speed of Denis and me we've allready finished the relay and lock tasks in this lecture. The relay was a simple "out" on D2 with the value on or off to lock and unlock the doorlock. Further task was to realise this via Node-Red
+
+### Node-Red
+The next task was to confiugre a simple lock/unlock button with Noder RED. If you click this butten the lock should be locked/unlocked. So Node RED provides us a UI. Node-Red just sends an MQTT message to the broker (Pi) which triggers the relay/lock.
+
+### Recap
+The hardest part in this lecture was the understanding of the mqtt stuff. How the nodes communicate with the broker and how to control them with the help of mqtt messages. After the knowledge of the mqtt things it was easy to setup the relay node. The Node-Red assignment was quite easy.
 
 ## 23.3.2018
 
 ### Control servo/lock vai a RFID-reader
-TODO!
+* Created ad flashed new node
+* Wired up the RFID
+* Created a new device on the node
+* Wrote data to a mifare classic card
+* Ran the node run()
+* Used Node-Red to check if RFID tag delivers the right code
+* If the tag was right we unlocked the dor as long as the tag was hold on the RFID reader.
 
 ### Showing temp/humidity on LCD-display
-TODO!
+* Created a new node for temp and humidity sensor
+* Created a node for the LCD display
+* Temp/humidity
+	* Testing and showing values in a line chart via Node-Red
+* LCD
+	* Followed tutorial from ulnoiot to setup the display correctly
+	* Tested the node via MQTT message displayed on the LCD
+* Configured the MQTT actions via Node-Red to foreward the data
 
-## 4.4.2018
+### Recap
+The first exercise was quite simple, because the only thing we had to do is taking the node and logic of the last lock exercise and just check if the mqtt message sends the right RFID code. The LCD display was also not that hard to understand.
+
+## 3.4.2018
 ### OpenHAB
+We downloaded and installed OpenHAB, but as we tried to start it as a service Windows refused this option. So everytime we want to use OpenHAB we have to start it manually.
 
 ### Debate
 #### PRO
+* More convenience
+* Everything is smart and connected
+* Growing industry
+* energy efficiency
+* fully automated tasks
 
 #### CON
+* less privacy
+* another entrance for hackers
+* complex
 
 ### Bus/Protocols
+#### I2C
+* I2C = Inter-Integrated Curcuit
+* Designed by Philips
+* Resent version = Version 6
+* Serial and Half-duplex
+* simple master/slave relationship
+* multi-master bus arbitration and collision detection
+
+* Speed: The clock is transmitted by the sender and the receiver is always able to synchronize with that clock. I2C defines several speed grades but * the term baud rate is quite unusual in this context.
+* Throughput:  0.1 standrad mode / 0.4 full speed / 1.0 fast mode / 3.4 highspeed (depending on mode)   
+* Length:  So the maximum bus length of an I2C link is about 1 meter at 100 Kbaud, or 10 meters at 10 Kbaud
+* Usage example: micro controller, components connected via cable, control architectures such as System Management Bus (SMBus), Power
+Management Bus (PMBus), Intelligent Platform Management Interface (IPMI), Display Data Channel (DDC) and Advanced Telecom Computing Architecture (ATCA).
+
+#### Other
+
+* RS232, RS442, RS485, DMX
+* Onewire/X10
+* Zwire/ZigBee
+* KNX-bus/E-bus
+* Modbus/CANbus
+* BACnet
+
+#### Favourite Bus/Protocols
+* I2C
+* SPI
+* Zegbee
+
+### Recap
+Beside that the roles in the debate were defined, it was clearly understandable what every group wanted to say. The opinions of every person was firm and well played, even if someone was normally for or against home automation. The second task of the lecture was a little bit unnecessary in my opinion. I didn't liked this bus stuff.
 
 ## 10.4.2018
+
+### KNX lecture
+ To get more in touch with the KNX bus protocol we had to complete an online course at the following website: https://www.knx.org/knx-en/training/knx-eacademy/ets-ecampus/index.php
+
+ After the completion of several questions and tasks I got an KNX certificate which could be found in my folder.
+
+### MQTT Simulator
+This task was also very little effort. I had to install node red on my own pc and just implement a node red flow. The reason of this was, that the MQTT broker (Raspberry Pi) sends a MQTT action which was executed by my PC due to limitations on the Pi. For example audio output or something like that.
+
+### IFTTT and Adafruit
+This was the most interessting task I've done in this course. The IFTTT platform gives you the opportunity to trigger events in other applications. I really like the idea of, if you do this than do that. The Adafruit extension was responsible for the MQTT message to the broker. The idea of this was, that if you say "Do something" to the Google Assistent it triggers a event and sends a message to adafruit, which again triggers a MQTT flow inside node red and does something.  
+
+### Philips Hue
+The Philips Hue stuff was done by [Piotr](Portfolios/Piotr%20Swietek/portfolio.md), but I always checked the newest changes, because I was interested in the topic.
+
+### Kodi
+[Oliver](Portfolios/Oliver%20Barth/portfolio.md) was responsible for the Kodi part. This was not very interesting for me, because I've allready done this at home.
+
+### Recap
+Except the KNX stuff the lecture was quite intressting and I had real fun implementing and learning this MQTT, IFTTT and HUE things.
+
+## 17.4.2018
+
+### Presentations Questions
+
+Cheap devices but very expensive and timeconsuming planing?
+
+Why only Loxone devices?
+
+### Snowboy
+
+* Created an account on Snowboy
+* I've choosen one Hotword from the list: Jarvis, Zoe, Alexa.
+* Recorded my voice 3 times saying the Hotword.
+* After that a testing is needed to download the pmdl file from Snowboy.
+
+To install and configure the microphone and Snowboy right on our Pi we had to use following commands and instruction:
+
+* sudo apt-get install python-pyaudio python3-pyaudio sox
+
+* pip install pyaudio
+
+* some problems fixed with some other commands
+
+	* virtualenv .p /usr/bin/python3 --system-site-packages .
+
+	* . bin/activate
+
+	* pip install pyaudio
+
+* arecord to record temp.wav in bad and good quality
+
+* arecord -f dat -D plughw:CARD=Device,DEV=0 temp.wav
+
+* alsamixer
+
+* sudo apt install libatlas-base-dev
+
+* sudo apt install swig
+
+* cd swig/Python3
+
+* make
+
+* wrong audiocards was used
+ 	* to fix this we had to add something in the asoundrc.
+	* steps and code will be explained in the documentation of Snowboy
+
+After this steps everything should be installed correctly and I could use the demo script and my pmdl file to test the hotword prediction of Snowboy.
+
+## 19.4.2018
+
+### Project 3 talk
+We talkt about different scenarios which we want to implement for the Project 3. We decided to realise the scenarios we've allready described in the Project 2.
+
+### RGB LED-Strip
+In the last lecture I did the task with the led strip. Following steps will be needed:
+
+* Flash a new node on the wemos d1 Mini
+* create a rgb_multi device with the correct number of the LED's mounted on the strip
+* connect the wemos d1 to a cable, because the usb cable probably will be to weak to power the wemos and d1
+* run the run() function
+* send MQTT messages to the wemos so the Strip will be turned on/off or changes its colors.
+
+The cool thing about this led rgb_multi led strip is, that you can easily access every single led and independently change colors of it.
+
+## 26.4.2018
+
+### Project Setup
+[Denis](https://github.com/PiotrSwietek/MC-Guys/blob/master/Portfolios/Denis%20Sivak/portfolio.md), [Manuel](https://github.com/PiotrSwietek/MC-Guys/blob/master/Portfolios/Manuel%20M%C3%BChlschuster/portfolio.md) and I did nearly the whole node stuff. We flashed following nodes:
+* Servo (Shutter, Windows,...)
+* Button
+* Multi RGB
+* Lock
+* Humiture Sensor
+
+Another work package for me was the Node Red flows. I created some flows and also fixed and tweaked some errors of the other flows.
+
+Last but not least I was responsible for the voice control via the Google Assistent, IFTTT and Adafruit. We triggered an mqtt message by saying "Movie mode". So the IFTTT application sends the data to Adafruit and the MQTT broker listens via Node Red on the Adafruit changes/events.
+
+### Project Recap
+I found it really really really intressting to see how a automated home or day could look like. The idea with the fully day scenarios is a really good idea to implement the system. It is easier to understand why we are doing this and what for we are doing this.
 
 ## Problems & Lessons Learned
 ### SSH
@@ -149,3 +316,10 @@ node2 = BUTTON
 
 ### Servo
 We didn't know how to configure the servo right. After the hint that we should use "servo_switch" it was easy to implement, because the servo_switch has a on/off function where it just switches to different given angles
+
+### Snowboy
+Nearly nothing was installed on the pi to use Snowboy instantly. look at the section Snowboy to see the command history.
+
+
+# Fully Recap
+I really liked the style of the lectures and things get taught. It is more or less learning by doing with teamwork. Another good thing was the helpfullness of your side. If we had any struggle with our task you helped us as fast as you could. But what i didn't liked so far was that the course was not managed by Moodle. After the Bachelor we allready got used to it and now everything changed. It was hard to observe deadlines. But all in all I can say i understand home automation and I am able to implement some real cool stuff in this domain.

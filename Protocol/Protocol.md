@@ -112,6 +112,7 @@ Because of time savings, we used node-RED for that task.
 * Download node-RED dashboard via `npm install node-red-dashboard`
 * Set up some UI-elements which sends commands (some kind of simulator), e.g., ![alt text](images/node-red_simulator "Node-RED MQTT-simulator")
 
+# 10.04.2018/17.04.2018
 ## Philips HUE lamps
 In order to connect an ethernet device (like hue lamps) and connect to a local network, the Pi must use a separate (wifi) connection to get internet access again. We have an wifi-usb-adapter, so we go for that one.
 
@@ -122,15 +123,64 @@ In order to connect an ethernet device (like hue lamps) and connect to a local n
 	* in ulnoiot/etc/ulnoiot.conf uncomment ulnoiot_ap_bridge=eth0
 * Plug in wifi-usb-adapter into Pi, conect the hue bridge via the ethernet port and reboot the Pi
 	* Pi should now connect to specified wifi and provide a working internet connection
+* Get list of all connected devices `arp -n` 
 * We have some problems with the internet connection, so we tried the hue app on Android to check if we can find the hue bridge
 	* App finds hue lamp
 	* After updating the bridge with the app, we get the the IP-address of the bridge 92.168.12.69
-* Get list of all connected devices `arp -n` 
+	* We can control the hue lamp remotely from our computer, guide provided here: https://www.developers.meethue.com/documentation/getting-started
+* Fixing internet issues on Pi (temporary, not working!)
+	* `sudo iptables -t nat -D POSTROUTING 1; sudo iptables -t nat -A POSTROUTING -s 192.168.12.1/24 -o wlan1 -j MASQUERADE`
+* We stop here and wait for a solution from our professor
 
+* Next try with new setup, updated ulnoiot on the Pi, getting a switch and a USB-LAN adapter.
+* Updated config files (see above)
+* After reboot, connect Pi with USB-LAN adapter and LAN to switch, and the switch with the hue-bridge via LAN.
+* Connect to Pi, load package node-red-contrib-huemagic in the node-RED interface including different HueMagic nodes.
+* Setup the lamp
+	* Include Hue Light node
+	* Select bridge inside node (tap on bridge to activate)
+	* Select light (Hue color lamp 1)
+* Build up node-Red configuration depending on your use-case, e.g. build a dashboard on node-red to control Hue lamp
+* ![alt text](images/hue_setup.JPG "Hue setup")
+* ![alt text](images/hueflow.png "Hue node-Red")
+* ![alt text](images/hue-gui.PNG "Hue node-Red UI")
+* ![alt text](images/hue_lamp.JPG "Hue lamp")
 
-	
+## Distance sensor/Motion Detector
+
+Goal is to implement a Motion Detector with the ultrasonic distance sensor
+
+* First create a new Node for the distance sensor
+* connect the sensor correctly: d2 = trigger, d1 = echo
+* In the node Terminal create new device: d("hcsr04", "distance", d2, d1, precision=10
+* now the sensor broadcasts on the created topic
+* use NodeRed to listen on the MQTT topic and create a function that sets an alarm when a specific threshold is crossed (we defined thershold<300 for testing)
+
 ## Kodi
-...
+> Kodi (formerly XBMC) is a free and open-source media player software application developed by the XBMC Foundation - Wikipedia
+
+Goal is to control Kodi over MQTT and node-RED.
+
+* Download Kodi and install Kodi (https://kodi.tv/download)
+* Using node-RED plugin
+	* e.g. node-red-contrib-kodi via `npm install node-red-contrib-kodi`
+	* Adds nodes to node-RED, uses RPC (JSON-format) to control Kodi instance.
+* Using Kodi-AddOn
+	* e.g. Kodi2MQTT (https://github.com/owagner/kodi2mqtt)
+	* Download, load into <kodi-install-path>/addons/
+	* Enable addon
+		* Start Kodi
+		* Go to Add-ons/My add-ons/Services
+		* Change some basic settings, e.g. MQTT-broker ip, port, etc., e.g. 
+![alt text](images/kodi_setting.PNG "Kodi plugin settings")
+	* Build nodes in node-RED (available topics see https://github.com/owagner/kodi2mqtt#topics)
+	* Node-Red configuration
+![alt text](images/kodi_node-red.PNG "Node-Red Kodi overview")
+	* Kodi player sends now commands to the topic and can be toggled via the UI-button
+	* Kodi sends commands when toggle play/pause
+![alt text](images/kodi_toggle_player.PNG "Toggle Kodi in the player")
+	* Kodi toggle via the UI-button
+![alt text](images/kodi_toggle_button.PNG "Toggle Kodi via the button")
 
 # (old) notices
 

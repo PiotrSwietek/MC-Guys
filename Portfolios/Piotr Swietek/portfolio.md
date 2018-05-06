@@ -65,7 +65,7 @@ I am probably more the programming type in a group. I can realize the ideas of o
 
 I downloaded the image from ulnoiot and made sure that the checksum is the same as stated on the source site.
 Then I flashed the SD card with it using Etcher.
-//Link protocol
+[Protocol](https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#raspberry)
 
 When entering the SD I thought the Pi is broken because I did not felt the spring when I inserted the card but the proffessor told us this Pi has no spring installed so all was fine.
 
@@ -77,11 +77,11 @@ In this exercise I learned how to set up a raspberry pi with a flashed SD card a
 
 # IoT domains
 
-Healthcare - Monitor hand hygiene compliance through IOT device and sensors to reduce transmission of Hospital Acquired Infections to patients.
-Transport and logistics - Monitoring the logistics vehicles health to send alerts.
-Retail - Remote interaction with products increase personalized shopping experience.
-Insurance - Tracking clients' activity and offer discounts or rewards for healthy and safe behavior.
-Farming - Tracking soil health and climate.
+Healthcare - Monitor hand hygiene compliance through IOT device and sensors to reduce transmission of Hospital Acquired Infections to patients.  
+Transport and logistics - Monitoring the logistics vehicles health to send alerts.  
+Retail - Remote interaction with products increase personalized shopping experience.  
+Insurance - Tracking clients' activity and offer discounts or rewards for healthy and safe behavior.  
+Farming - Tracking soil health and climate.  
 
 ## Devices:
 * smart locks
@@ -92,7 +92,7 @@ Farming - Tracking soil health and climate.
 # Node onboard_blinker
 
 I set up an LED which can be controlled with MQTT through an internet connection.
-//Link protocol
+[Protocol](https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#iot-nodes)
 
 At first I was a bit overwhelmed but after spending some time reading the ulnoiot documentation things got clearer and I could complete this exercise.
 
@@ -113,7 +113,7 @@ in my own home. This would not be too much work either which is impressive.
 # MQTT - NodeRed
 
 Task was to steer the blinker through a button. But both were on seperate devices only communicating through the WiFi.
-I followed the solution of Bernhard Hiesl & Denis Sivak //Link here
+I followed the solution of Bernhard Hiesl & Denis Sivak [Protocol](https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#ulnoiot-hello-world)
 
 The MQTT commands caused us trouble because I forgot that I had to use them on the pi and not in the device console.
 Also I forgot to execute the run() command so all the MQTT set requests would not be executed.
@@ -126,7 +126,7 @@ I had some trouble setting it all up but in retrospective it isnt hard at all.
 
 # Smart Lock
 
-Task was to control a magnetic lock through a graphical UI in the web using NodeRed.
+Task was to control a magnetic lock through a graphical UI in the web using NodeRed. [Protocol](https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#control-servolock-vai-a-rfid-reader)
 
 The lock would be steered through a relay(electrical switch). I connected one connector of the lock to the power supply and the other to the relay.
 The relay was connected to the powersupply of the lock and the lock itself. Now I have to define a new device for the output port:
@@ -139,7 +139,7 @@ It even started to smell burned so I disabled the power of it. I tried to connec
 
 # Temperature and Humidity + LCD
 
-Task was to set up a temperature and humidity sensor which is connected to the LCD display. The LCD should show the temperature and humidity in real time.
+Task was to set up a temperature and humidity sensor which is connected to the LCD display. The LCD should show the temperature and humidity in real time. [Protocol](https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#showing-temphumidity-on-lcd-display)
 
 The temperature setup was no problem at all. Because it was the same procedure with all other nodes. The LCD on the other hand did create some problems.
 First I connected the LCD wrong with the controller so I did not work at all. But after reading the documentation it worked properly.
@@ -160,15 +160,16 @@ I had problems installing Homeassistant on my Windows PC. The Installation guide
 to execute the commands stated in the guide but it took more than a hour to execute this command so I interrupted it.
 
 # Debate
+I was in the Contra team but I was in the audience so I took notes:
 
 ## PRO
-### Phase 1
+### Phase 1  
 automated home examples, smart light, smart heating, energy consumption.
 Comparison smart home - normal human -> more happy, more comfortable
 happyness through convenience
 easy to install
 easy to upgrade
-=======================================================================
+______________________________________________________
 Home automation is growing, a lot of customization
 market is becoming more open and accessible
 other devices have cameras too but not much security breaches there
@@ -187,10 +188,10 @@ Change password dont use default settings
 
 
 ## CON
-### Phase 1
+### Phase 1  
 hacked locks/camera, less security against thieves
 loss of privacy
-======================================================================
+______________________________________________________
 too complex for older people
 costs are high
 experts are very expensive for installing home-automation systems
@@ -269,3 +270,81 @@ standard for industrail electronic deviceseasy to deploy
 master/slave with unique adresses
 
 chosen: SPI, I2C, zigbee
+
+# KNX Course
+
+In this class whe had to go through the KNX course and do the test to get the [KNX certificate](https://github.com/PiotrSwietek/MC-Guys/blob/master/Portfolios/Piotr%20Swietek/knxcertification.pdf).
+
+# Phillips Hue
+
+In this exercise we had to set up a Phillips Hue Lamp and controll it through MQTT commands or NodeRED. [Protocol](https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#philips-hue-lamps)
+
+I had a lot of trouble setting up the Phillips bridge but after some time we managed to get it working. The Problem was that the bridge hat no internet access. I figured out how to set it up correctly: I had to connect everything before the pi did bootup and then it worked.
+
+Setting up nodered to control the HUE Lamp was quite easy. In the end I could controll the brightness and Color of the lamp and I could turn it off remotely.
+
+Out of all exercises I liked this the most. It was really fascinating seeing the lamp go on when you press a button in the web UI. I also liked it because it was like automating your own lighting in the real world. The lamps may be expensive but I think they are worth it.
+
+# Distance sensor/Motion Detector
+
+The task was to set up a distance sencor to function like a motion sensor. [Protocol](https://github.com/PiotrSwietek/MC-Guys/blob/master/Protocol/Protocol.md#distance-sensormotion-detector)
+
+I lost almos 2 hours setting up the distance sensor becaus it just would not work... Then I realised that the sensor was defect and my approach worked with another sensor perfectly. This has upset me alot because I did everything correctly but the sensor wouldn work.
+
+When I set the sensor up I could get the measured distance through MQTT. I wrote a function to detect movement in NodeRed.
+
+I think that the distance sensor is not a reliable motion detector but it could kind of work indoors I guess. Sadly we had no real motion detectors available.
+
+# [Project 2](https://github.com/PiotrSwietek/MC-Guys/tree/master/Projects/project2)
+The project was about automating a friends house. We have written a [scenario](https://github.com/PiotrSwietek/MC-Guys/blob/master/Projects/project2/Automate-your-friends-home_scenario.pdf) for the family which lives in the house we want to automate.
+
+Our team nearly missed the deadline but in the end we managed to deliver a good plan and list of parts we needed.
+We also got a lot of praise on our scenario which was quite surprising to me because we did not really put a lot of effort into it.
+
+Thankfully the presentaion went smoothly and with no problems.
+
+Some notes and questions from the other presentations:
+
+Internationals
+
+* Rich luxurious people who want the best. (paul and rachel)
+* Some crazy ideas like outfit system in the walk-in closet
+* very detailed workload plan 
+
+Different devices from different manufacturers? Is it all possible to connect? Is it a lot of work?
+
+ENI
+
+* A smart and wealthy but paranoid guy
+* Has a dog (but sadly only mentioned in scenario)
+* Presentation itself very technical and almost too long
+
+Why did you choose loxone? Is it possible to mix loxone parts with other?
+
+# [Project 3](https://github.com/PiotrSwietek/MC-Guys/tree/master/Projects/project3)
+
+Project 3 was about defining some scenarios and implementing them ourselves.
+
+We used our written scenario from Project 2 and picked out some more interesting ones to recreate.
+
+I was responsible for the HUE Lamps and the whole security apsect (motion detector/lock/rfid/alarm sound).
+
+The presentation was a bit wonky because we have built everything live and one member of our team connected the nodes as the presentation went on. For a live presentation it went really well actually.
+
+Notes on other presentation:
+
+ENI:
+* cool selfmade water boilder
+* good presentation 
+
+Internationals:
+* unfortunatly no live demos but videos were nice too
+* a bit disconnected from their actual scenario
+
+# Reflection
+
+All in all the course was very different from the other courses. Most of the classes we spent tinkering around with devices which was really nice. I also liked the amount of sensors and devices we had at our disposal. We did not really learn a lot whats going on behind the scene though. We kind of just used some commands from the UlnoIOT framework (which I dont know what it is exactly) and used some high level MQTT commands and eveything worked. I wish we would get a little background information what UlnoIOT really is, what is it architecture and so on. I did not like the fact that we used the Matrix chat and that the course utilities were not on the standard moodle elearning platform the students are used to. It was sometimes really confusing when some informations regarding the project deadlines or content were changed from the slides and only mentioned in the matrix chat. I was not online in the chat everyday and it happened that I overlooked some vital informations which was frustrating.
+
+In summary I liked the course a lot. We learned a lot of useful things and the course gave me a kickstart in the homebuilding field, which was my hope for this course.
+
+
