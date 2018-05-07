@@ -141,8 +141,8 @@ to get a bit more insight on how it really works and what happens in the backgro
 # Lecture 3 (23.03.2018)
 
 ## Summary of practical stuff done
-[(Link to protocol / rfid reader)](../../Protocol/Protocol.md#Control-servo)
- [(Link to protocol / dht22 & display)](../../Protocol/Protocol.md#Showing-temp)
+[(Link to protocol / rfid reader)](../../Protocol/Protocol.md#control-servolock-vai-a-rfid-reader)
+[(Link to protocol / dht22 & display)](../../Protocol/Protocol.md#showing-temphumidity-on-lcd-display)
 
 	* Setting up the door lock using an RFID card reader 
 	* Setting up a temperature and humidity sensor
