@@ -79,13 +79,10 @@ Trigger a lock (12V) with a relay controlled by a button.
 * Create node on Pi for LCD and flash
 * Temp/humidity
 	* Testing values via Node-Red UI component
-	* ![alt text](images/node-red_LCD-UI.PNG "Node-Red Temp/humidity UI")
 * LCD-node
 	* Following tutorial on https://github.com/ulno/ulnoiot/blob/master/doc/node_help/display44780.txt to setup all correctly.
 	* Testing node via MQTT, send message, should be displayed on LCD
 * Configure MQTT action for forwarding via Node-Red
-	* ![alt text](images/node-red_LCD.PNG "Node-Red LCD overview")
-	* ![alt text](images/node-red_LCD.PNG "Node-Red LCD function")
 	
 	
 # 03.04.2018
@@ -181,33 +178,3 @@ Goal is to control Kodi over MQTT and node-RED.
 ![alt text](images/kodi_toggle_player.PNG "Toggle Kodi in the player")
 	* Kodi toggle via the UI-button
 ![alt text](images/kodi_toggle_button.PNG "Toggle Kodi via the button")
-
-# (old) notices
-
-Commands are faster than the provided filebrowser from MobaXTerm (for denis).
-
-Misunderstanding with the config files system.conf and node.conf
-
-
-d("button", "switch", d1, "depressed", "pressed")
-
-## Configure Node1 and Node2
-The biggest problem this morning was, that we couldn't figure out which device is node 1 and node 2. Therefore we write it down
-
-node1 = LED
-node2 = BUTTON
-
-We had some weird problems with the connection to the nodes. looked like an network error. after updating the autostart and flash both devices everything was up and running. the restart of the node1 after plug it into my pc it tooks a little bit longer than 10-15s but all in all everything is now working. and we can continue with our exercise
-
-## Node RED
-Programming tool for wiring together hardware devices.
-
-Everything was clear except the automatically intizialization of the local variable context.togglestate.
-
-
-### Piotr, Manuel, Oliver
-- invite manuel, denis and bernhard to ulnoiot and ulnoiot.mc0509 to riot via email
-
-
-
-
