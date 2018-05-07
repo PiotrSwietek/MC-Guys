@@ -124,7 +124,7 @@ I really liked how ulno-iot is implemented and how easy it is to configure a nod
 	* Security
 	
 ## Summary of practical stuff done
-[(Link to protocol / wemos setup)](../../Protocol/Protocol.md#ulnoiot-hello-world)
+[(Link to protocol / wemos setup)](../../Protocol/Protocol.md#ulnoiot-hello-world)  
 [(Link to protocol / doorlock)](../../Protocol/Protocol.md#relay)
 
 	* Setting up a second Wemos D1 mini node
@@ -141,7 +141,7 @@ to get a bit more insight on how it really works and what happens in the backgro
 # Lecture 3 (23.03.2018)
 
 ## Summary of practical stuff done
-[(Link to protocol / rfid reader)](../../Protocol/Protocol.md#control-servolock-vai-a-rfid-reader)
+[(Link to protocol / rfid reader)](../../Protocol/Protocol.md#control-servolock-vai-a-rfid-reader)  
 [(Link to protocol / dht22 & display)](../../Protocol/Protocol.md#showing-temphumidity-on-lcd-display)
 
 	* Setting up the door lock using an RFID card reader 
@@ -231,6 +231,7 @@ Overall I think it was quite fun for everybody to see different viewpoints on th
 # Lecture 5 (10.04.2018)
 
 ## KNX eCampus
+[(Link to protocol / rfid reader)](../../Protocol/Protocol.md#knx-certificate)  
 [(Link to certificate)](./knxcertification.pdf)
 
 In the beginning of the lecture, we started the KNX eCampus which is basically a set of tutorials for the use of the KNX bus/protocol. The tutorials also include
