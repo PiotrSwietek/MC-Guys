@@ -107,7 +107,7 @@ Because of time savings, we used node-RED for that task.
 
 * Download node-RED to the computer via npm `npm install -g --unsafe-pem node-red`
 * Download node-RED dashboard via `npm install node-red-dashboard`
-* Set up some UI-elements which sends commands (some kind of simulator), e.g., ![alt text](images/node-red_simulator "Node-RED MQTT-simulator")
+* Set up some UI-elements which sends commands (some kind of simulator)
 
 # 10.04.2018/17.04.2018
 ## Philips HUE lamps
