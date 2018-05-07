@@ -231,6 +231,8 @@ Overall I think it was quite fun for everybody to see different viewpoints on th
 # Lecture 5 (10.04.2018)
 
 ## KNX eCampus
+[(Link to certificate)](./knxcertification.pdf)
+
 In the beginning of the lecture, we started the KNX eCampus which is basically a set of tutorials for the use of the KNX bus/protocol. The tutorials also include
 simulations and quizzes which had to be completed. After completing all of the tutorials, a KNX certificate is achieved. 
 Personally I found that the tutorial was very simple but it showed the basic usage and setup of the software with the devices which could be useful in the future.
